@@ -45,17 +45,24 @@ namespace SimpleExpenses
             this.label13 = new System.Windows.Forms.Label();
             this.tbBudgets = new System.Windows.Forms.TextBox();
             this.tbRent = new System.Windows.Forms.TextBox();
-            this.tbUtilitycosts = new System.Windows.Forms.TextBox();
-            this.tbCellphone = new System.Windows.Forms.TextBox();
-            this.tbFoodcosts = new System.Windows.Forms.TextBox();
+            this.tbUtilityCosts = new System.Windows.Forms.TextBox();
+            this.tbCellPhoneBill = new System.Windows.Forms.TextBox();
+            this.tbFoodCosts = new System.Windows.Forms.TextBox();
             this.tbMedicalcosts = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tbMExpense = new System.Windows.Forms.TextBox();
+            this.tbTravelCosts = new System.Windows.Forms.TextBox();
+            this.tbTuition = new System.Windows.Forms.TextBox();
+            this.tbSpecialCosts = new System.Windows.Forms.TextBox();
+            this.tbSavings = new System.Windows.Forms.TextBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btLManth = new System.Windows.Forms.Button();
+            this.btNManth = new System.Windows.Forms.Button();
+            this.btComparison = new System.Windows.Forms.Button();
+            this.btCalculation = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -71,16 +78,16 @@ namespace SimpleExpenses
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.tbTotal);
+            this.groupBox1.Controls.Add(this.tbSavings);
+            this.groupBox1.Controls.Add(this.tbSpecialCosts);
+            this.groupBox1.Controls.Add(this.tbTuition);
+            this.groupBox1.Controls.Add(this.tbMExpense);
+            this.groupBox1.Controls.Add(this.tbTravelCosts);
             this.groupBox1.Controls.Add(this.tbMedicalcosts);
-            this.groupBox1.Controls.Add(this.tbFoodcosts);
-            this.groupBox1.Controls.Add(this.tbCellphone);
-            this.groupBox1.Controls.Add(this.tbUtilitycosts);
+            this.groupBox1.Controls.Add(this.tbFoodCosts);
+            this.groupBox1.Controls.Add(this.tbCellPhoneBill);
+            this.groupBox1.Controls.Add(this.tbUtilityCosts);
             this.groupBox1.Controls.Add(this.tbRent);
             this.groupBox1.Controls.Add(this.tbBudgets);
             this.groupBox1.Controls.Add(this.label8);
@@ -223,99 +230,203 @@ namespace SimpleExpenses
             // 
             // tbBudgets
             // 
+            this.tbBudgets.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbBudgets.Location = new System.Drawing.Point(152, 12);
             this.tbBudgets.Name = "tbBudgets";
-            this.tbBudgets.Size = new System.Drawing.Size(120, 19);
+            this.tbBudgets.Size = new System.Drawing.Size(120, 23);
             this.tbBudgets.TabIndex = 1;
+            this.tbBudgets.Text = "0";
+            this.tbBudgets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbRent
             // 
+            this.tbRent.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbRent.Location = new System.Drawing.Point(152, 37);
             this.tbRent.Name = "tbRent";
-            this.tbRent.Size = new System.Drawing.Size(120, 19);
+            this.tbRent.Size = new System.Drawing.Size(120, 23);
             this.tbRent.TabIndex = 1;
+            this.tbRent.Text = "0";
+            this.tbRent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbUtilitycosts
+            // tbUtilityCosts
             // 
-            this.tbUtilitycosts.Location = new System.Drawing.Point(152, 62);
-            this.tbUtilitycosts.Name = "tbUtilitycosts";
-            this.tbUtilitycosts.Size = new System.Drawing.Size(120, 19);
-            this.tbUtilitycosts.TabIndex = 1;
+            this.tbUtilityCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbUtilityCosts.Location = new System.Drawing.Point(152, 62);
+            this.tbUtilityCosts.Name = "tbUtilityCosts";
+            this.tbUtilityCosts.Size = new System.Drawing.Size(120, 23);
+            this.tbUtilityCosts.TabIndex = 1;
+            this.tbUtilityCosts.Text = "0";
+            this.tbUtilityCosts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbCellphone
+            // tbCellPhoneBill
             // 
-            this.tbCellphone.Location = new System.Drawing.Point(152, 87);
-            this.tbCellphone.Name = "tbCellphone";
-            this.tbCellphone.Size = new System.Drawing.Size(120, 19);
-            this.tbCellphone.TabIndex = 1;
+            this.tbCellPhoneBill.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbCellPhoneBill.Location = new System.Drawing.Point(152, 87);
+            this.tbCellPhoneBill.Name = "tbCellPhoneBill";
+            this.tbCellPhoneBill.Size = new System.Drawing.Size(120, 23);
+            this.tbCellPhoneBill.TabIndex = 1;
+            this.tbCellPhoneBill.Text = "0";
+            this.tbCellPhoneBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbFoodcosts
+            // tbFoodCosts
             // 
-            this.tbFoodcosts.Location = new System.Drawing.Point(152, 112);
-            this.tbFoodcosts.Name = "tbFoodcosts";
-            this.tbFoodcosts.Size = new System.Drawing.Size(120, 19);
-            this.tbFoodcosts.TabIndex = 1;
+            this.tbFoodCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbFoodCosts.Location = new System.Drawing.Point(152, 112);
+            this.tbFoodCosts.Name = "tbFoodCosts";
+            this.tbFoodCosts.Size = new System.Drawing.Size(120, 23);
+            this.tbFoodCosts.TabIndex = 1;
+            this.tbFoodCosts.Text = "0";
+            this.tbFoodCosts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbMedicalcosts
             // 
+            this.tbMedicalcosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbMedicalcosts.Location = new System.Drawing.Point(152, 137);
             this.tbMedicalcosts.Name = "tbMedicalcosts";
-            this.tbMedicalcosts.Size = new System.Drawing.Size(120, 19);
+            this.tbMedicalcosts.Size = new System.Drawing.Size(120, 23);
             this.tbMedicalcosts.TabIndex = 1;
+            this.tbMedicalcosts.Text = "0";
+            this.tbMedicalcosts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox7
+            // tbMExpense
             // 
-            this.textBox7.Location = new System.Drawing.Point(152, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(120, 19);
-            this.textBox7.TabIndex = 1;
+            this.tbMExpense.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbMExpense.Location = new System.Drawing.Point(152, 164);
+            this.tbMExpense.Name = "tbMExpense";
+            this.tbMExpense.Size = new System.Drawing.Size(120, 23);
+            this.tbMExpense.TabIndex = 1;
+            this.tbMExpense.Text = "0";
+            this.tbMExpense.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox8
+            // tbTravelCosts
             // 
-            this.textBox8.Location = new System.Drawing.Point(152, 189);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(120, 19);
-            this.textBox8.TabIndex = 1;
+            this.tbTravelCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTravelCosts.Location = new System.Drawing.Point(152, 189);
+            this.tbTravelCosts.Name = "tbTravelCosts";
+            this.tbTravelCosts.Size = new System.Drawing.Size(120, 23);
+            this.tbTravelCosts.TabIndex = 1;
+            this.tbTravelCosts.Text = "0";
+            this.tbTravelCosts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox9
+            // tbTuition
             // 
-            this.textBox9.Location = new System.Drawing.Point(152, 214);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(120, 19);
-            this.textBox9.TabIndex = 1;
+            this.tbTuition.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTuition.Location = new System.Drawing.Point(152, 214);
+            this.tbTuition.Name = "tbTuition";
+            this.tbTuition.Size = new System.Drawing.Size(120, 23);
+            this.tbTuition.TabIndex = 1;
+            this.tbTuition.Text = "0";
+            this.tbTuition.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox10
+            // tbSpecialCosts
             // 
-            this.textBox10.Location = new System.Drawing.Point(152, 238);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(120, 19);
-            this.textBox10.TabIndex = 1;
+            this.tbSpecialCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbSpecialCosts.Location = new System.Drawing.Point(153, 239);
+            this.tbSpecialCosts.Name = "tbSpecialCosts";
+            this.tbSpecialCosts.Size = new System.Drawing.Size(120, 23);
+            this.tbSpecialCosts.TabIndex = 1;
+            this.tbSpecialCosts.Text = "0";
+            this.tbSpecialCosts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox11
+            // tbSavings
             // 
-            this.textBox11.Location = new System.Drawing.Point(152, 265);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(120, 19);
-            this.textBox11.TabIndex = 1;
+            this.tbSavings.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbSavings.Location = new System.Drawing.Point(152, 265);
+            this.tbSavings.Name = "tbSavings";
+            this.tbSavings.Size = new System.Drawing.Size(120, 23);
+            this.tbSavings.TabIndex = 1;
+            this.tbSavings.Text = "0";
+            this.tbSavings.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox12
+            // tbTotal
             // 
-            this.textBox12.Location = new System.Drawing.Point(152, 304);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(120, 19);
-            this.textBox12.TabIndex = 1;
+            this.tbTotal.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTotal.Location = new System.Drawing.Point(153, 305);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(120, 23);
+            this.tbTotal.TabIndex = 1;
+            this.tbTotal.Text = "0";
+            this.tbTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.groupBox2.Location = new System.Drawing.Point(301, 69);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(259, 234);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "メモ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox1.Location = new System.Drawing.Point(0, 17);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(259, 217);
+            this.textBox1.TabIndex = 0;
+            // 
+            // btLManth
+            // 
+            this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btLManth.Location = new System.Drawing.Point(329, 310);
+            this.btLManth.Name = "btLManth";
+            this.btLManth.Size = new System.Drawing.Size(73, 47);
+            this.btLManth.TabIndex = 3;
+            this.btLManth.Text = "先月";
+            this.btLManth.UseVisualStyleBackColor = true;
+            // 
+            // btNManth
+            // 
+            this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btNManth.Location = new System.Drawing.Point(454, 310);
+            this.btNManth.Name = "btNManth";
+            this.btNManth.Size = new System.Drawing.Size(73, 47);
+            this.btNManth.TabIndex = 3;
+            this.btNManth.Text = "来月";
+            this.btNManth.UseVisualStyleBackColor = true;
+            // 
+            // btComparison
+            // 
+            this.btComparison.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btComparison.Location = new System.Drawing.Point(454, 365);
+            this.btComparison.Name = "btComparison";
+            this.btComparison.Size = new System.Drawing.Size(73, 47);
+            this.btComparison.TabIndex = 3;
+            this.btComparison.Text = "比較";
+            this.btComparison.UseVisualStyleBackColor = true;
+            // 
+            // btCalculation
+            // 
+            this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCalculation.Location = new System.Drawing.Point(329, 365);
+            this.btCalculation.Name = "btCalculation";
+            this.btCalculation.Size = new System.Drawing.Size(73, 47);
+            this.btCalculation.TabIndex = 3;
+            this.btCalculation.Text = "計算";
+            this.btCalculation.UseVisualStyleBackColor = true;
             // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 424);
+            this.Controls.Add(this.btCalculation);
+            this.Controls.Add(this.btComparison);
+            this.Controls.Add(this.btNManth);
+            this.Controls.Add(this.btLManth);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Start";
             this.Text = "簡単家計簿 ★記録★";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,16 +436,16 @@ namespace SimpleExpenses
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbTotal;
+        private System.Windows.Forms.TextBox tbSavings;
+        private System.Windows.Forms.TextBox tbSpecialCosts;
+        private System.Windows.Forms.TextBox tbTuition;
+        private System.Windows.Forms.TextBox tbMExpense;
+        private System.Windows.Forms.TextBox tbTravelCosts;
         private System.Windows.Forms.TextBox tbMedicalcosts;
-        private System.Windows.Forms.TextBox tbFoodcosts;
-        private System.Windows.Forms.TextBox tbCellphone;
-        private System.Windows.Forms.TextBox tbUtilitycosts;
+        private System.Windows.Forms.TextBox tbFoodCosts;
+        private System.Windows.Forms.TextBox tbCellPhoneBill;
+        private System.Windows.Forms.TextBox tbUtilityCosts;
         private System.Windows.Forms.TextBox tbRent;
         private System.Windows.Forms.TextBox tbBudgets;
         private System.Windows.Forms.Label label8;
@@ -349,5 +460,11 @@ namespace SimpleExpenses
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btLManth;
+        private System.Windows.Forms.Button btNManth;
+        private System.Windows.Forms.Button btComparison;
+        private System.Windows.Forms.Button btCalculation;
     }
 }
