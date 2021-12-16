@@ -61,7 +61,7 @@ namespace SimpleExpenses
             this.btNManth = new System.Windows.Forms.Button();
             this.btComparison = new System.Windows.Forms.Button();
             this.btCalculation = new System.Windows.Forms.Button();
-            this.btEnd = new System.Windows.Forms.Button();
+            this.btMenu = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -390,6 +390,7 @@ namespace SimpleExpenses
             this.btNManth.TabIndex = 3;
             this.btNManth.Text = "来月";
             this.btNManth.UseVisualStyleBackColor = true;
+            this.btNManth.Click += new System.EventHandler(this.btNManth_Click);
             // 
             // btComparison
             // 
@@ -412,16 +413,16 @@ namespace SimpleExpenses
             this.btCalculation.UseVisualStyleBackColor = true;
             this.btCalculation.Click += new System.EventHandler(this.btCalculation_Click);
             // 
-            // btEnd
+            // btMenu
             // 
-            this.btEnd.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btEnd.Location = new System.Drawing.Point(508, 0);
-            this.btEnd.Name = "btEnd";
-            this.btEnd.Size = new System.Drawing.Size(64, 34);
-            this.btEnd.TabIndex = 4;
-            this.btEnd.Text = "終了";
-            this.btEnd.UseVisualStyleBackColor = true;
-            this.btEnd.Click += new System.EventHandler(this.btEnd_Click);
+            this.btMenu.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btMenu.Location = new System.Drawing.Point(508, 0);
+            this.btMenu.Name = "btMenu";
+            this.btMenu.Size = new System.Drawing.Size(64, 34);
+            this.btMenu.TabIndex = 4;
+            this.btMenu.Text = "メニュー";
+            this.btMenu.UseVisualStyleBackColor = true;
+            this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 
             // btSave
             // 
@@ -440,7 +441,7 @@ namespace SimpleExpenses
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 424);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.btEnd);
+            this.Controls.Add(this.btMenu);
             this.Controls.Add(this.btCalculation);
             this.Controls.Add(this.btComparison);
             this.Controls.Add(this.btNManth);
@@ -494,7 +495,7 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btNManth;
         private System.Windows.Forms.Button btComparison;
         private System.Windows.Forms.Button btCalculation;
-        private System.Windows.Forms.Button btEnd;
+        private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Button btSave;
     }
 }

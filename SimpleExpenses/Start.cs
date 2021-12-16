@@ -60,9 +60,43 @@ namespace SimpleExpenses
             sw.Close();
         }
 
-        private void btEnd_Click(object sender, EventArgs e)
+        private void btMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btNManth_Click(object sender, EventArgs e)
+        {
+            DateTime next = DateTime.Now.AddMonths(+1);
+            lbDay.Text = next.Year.ToString() + "年"+ next.Month.ToString() + "月";
+            if (File.Exists(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv"))
+            {
+                var reader = new StreamReader(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv",
+                    System.Text.Encoding.GetEncoding("shift_jis"));
+                //CSVから文字を読み取り、文字列として返す
+                String sLine;
+                String[] sFields;
+                for (int i = 0; i < 12; i++)
+                {
+                    sLine = reader.ReadLine();
+                    
+                }
+                sFields = sLine.Split(',');
+                tbBudgets.Text = sFields[0];
+                tbRent.Text = sFields[1];
+                tbUtilityCosts.Text = sFields[2];
+                tbCellPhoneBill.Text = sFields[3];
+                tbFoodCosts.Text = sFields[4];
+                tbMedicalcosts.Text = sFields[5];
+                tbMExpense.Text = sFields[6];
+                tbTravelCosts.Text = sFields[7];
+                tbTuition.Text = sFields[8];
+                tbSpecialCosts.Text = sFields[9];
+                tbSavings.Text = sFields[10];
+                tbTotal.Text = sFields[11];
+                tbMemo.Text = sFields[12];
+            }
+
         }
     }
 }
