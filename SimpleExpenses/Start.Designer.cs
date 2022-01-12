@@ -370,6 +370,7 @@ namespace SimpleExpenses
             this.tbMemo.Name = "tbMemo";
             this.tbMemo.Size = new System.Drawing.Size(259, 217);
             this.tbMemo.TabIndex = 0;
+            this.tbMemo.Text = " ";
             // 
             // btLManth
             // 
@@ -380,6 +381,7 @@ namespace SimpleExpenses
             this.btLManth.TabIndex = 3;
             this.btLManth.Text = "先月";
             this.btLManth.UseVisualStyleBackColor = true;
+            this.btLManth.Click += new System.EventHandler(this.btLManth_Click);
             // 
             // btNManth
             // 
