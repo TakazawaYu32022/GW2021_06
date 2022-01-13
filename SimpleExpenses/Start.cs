@@ -29,34 +29,38 @@ namespace SimpleExpenses
             //起動したときの月のデータがあれば表示する
             String sLine = "";
             String[] sFields = new string[13];
-            //相対パスに変更する
-            if (File.Exists(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv"))
+            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            if (File.Exists(fullPath))
             {
-                var reader = new StreamReader(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv");
+                var reader = new StreamReader(fullPath);
+                sLine = reader.ReadLine();
+                sFields = sLine.Split(',');
+
+
                 //CSVから文字を読み取り、文字列として返す
 
-                for (int i = 0; i < 12; i++)
+                /*for (int i = 0; i < 12; i++)
                 {
-                    sLine = reader.ReadLine();
-                    sFields[i] = sLine;
-                }
+                    
+                    
+                }*/
 
-                tbBudgets.Text = sFields[0];
-                tbRent.Text = sFields[1];
-                tbUtilityCosts.Text = sFields[2];
-                tbCellPhoneBill.Text = sFields[3];
-                tbFoodCosts.Text = sFields[4];
-                tbMedicalcosts.Text = sFields[5];
-                tbMExpense.Text = sFields[6];
-                tbTravelCosts.Text = sFields[7];
-                tbTuition.Text = sFields[8];
-                tbSpecialCosts.Text = sFields[9];
-                tbSavings.Text = sFields[10];
-                tbTotal.Text = sFields[11];
-                tbMemo.Text = sFields[12];
+                tbBudgets.Text = sFields[1];
+                tbRent.Text = sFields[2];
+                tbUtilityCosts.Text = sFields[3];
+                tbCellPhoneBill.Text = sFields[4];
+                tbFoodCosts.Text = sFields[5];
+                tbMedicalcosts.Text = sFields[6];
+                tbMExpense.Text = sFields[7];
+                tbTravelCosts.Text = sFields[8];
+                tbTuition.Text = sFields[9];
+                tbSpecialCosts.Text = sFields[10];
+                tbSavings.Text = sFields[11];
+                tbTotal.Text = sFields[12];
+                tbMemo.Text = sFields[13];
                 reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。
             }
-            //来月のデータがなかった場合
+            //データがなかった場合
             else
             {
                 tbBudgets.Text = "0";
@@ -97,40 +101,34 @@ namespace SimpleExpenses
             {
                 MessageBox.Show("数字のみ入力してください。");
             }
-            tbTotal.Text = String.Format("{0:#,##0}", result);
+            //「計」の値をカンマ区切りで表示する。（CSVファイルに保存するとき別のデータとして区切られてしまう）
+            tbTotal.Text = String.Format(/*"{0:#,##0}",*/ result.ToString());
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
-
-            //相対パスに変更する
-            if (File.Exists(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv"))
+            //データの更新
+            //
+            //var writer = new StreamWriter(fs);
+            string[] data = new string[] 
             {
-                //データの更新
-                //FileStream fs = new FileStream(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                //var writer = new StreamWriter(fs);
-                File.WriteAllText(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv",
-                          tbBudgets.Text + "\r\n" + tbRent.Text + "\r\n" + tbUtilityCosts.Text + "\r\n"
-                        + tbCellPhoneBill.Text + "\r\n" + tbFoodCosts.Text + "\r\n" + tbMedicalcosts.Text + "\r\n"
-                        + tbMExpense.Text + "\r\n" + tbTravelCosts.Text + "\r\n" + tbTuition.Text + "\r\n"
-                        + tbSpecialCosts.Text + "\r\n" + tbSavings.Text + "\r\n" + tbTotal.Text + "\r\n"
-                        + tbMemo.Text + "\r\n", Encoding.UTF8);
-
-
-            }
-            else
+                     lbDay.Text,tbBudgets.Text,tbRent.Text,tbUtilityCosts.Text
+                    ,tbCellPhoneBill.Text,tbFoodCosts.Text,tbMedicalcosts.Text
+                    ,tbMExpense.Text,tbTravelCosts.Text,tbTuition.Text
+                    ,tbSpecialCosts.Text,tbSavings.Text,tbTotal.Text
+                    ,tbMemo.Text,
+            };
+            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            StreamWriter sw = new StreamWriter(fullPath,true,Encoding.UTF8);
+            string outData = "";
+            //string outData = string.Format("{0},{1},{2}", lbDay.Text, tbBudgets.Text, tbRent.Text);
+            for (int i = 0; i< data.Length; i++)
             {
-                //データの新規追加
-                String now = DateTime.Now.ToString(lbDay.Text/*"yyyy" + "年" + "MM" + "月"*/);
-                //相対パスに変更する
-                StreamWriter sw = new StreamWriter(@"C:\Users\infosys\Desktop\test\" + now + ".csv", true);
-                sw.Write(tbBudgets.Text + "\r\n" + tbRent.Text + "\r\n" + tbUtilityCosts.Text + "\r\n"
-                            + tbCellPhoneBill.Text + "\r\n" + tbFoodCosts.Text + "\r\n" + tbMedicalcosts.Text + "\r\n"
-                            + tbMExpense.Text + "\r\n" + tbTravelCosts.Text + "\r\n" + tbTuition.Text + "\r\n"
-                            + tbSpecialCosts.Text + "\r\n" + tbSavings.Text + "\r\n" + tbTotal.Text + "\r\n"
-                            + tbMemo.Text + "\r\n");
-                sw.Close();
+                outData += data[i] + ",";
             }
+            sw.WriteLine(outData);
+            sw.Close();
+
             
         }
 
@@ -147,31 +145,28 @@ namespace SimpleExpenses
             _Now = next;
             lbDay.Text = next.Year.ToString() + "年"+ next.Month.ToString() + "月";
             //相対パスに変更する
-            if (File.Exists(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv"))
+            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            if (File.Exists(fullPath))
             {
-                //相対パスに変更する
-                var reader = new StreamReader(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv");
+                var reader = new StreamReader(fullPath);
                 //CSVから文字を読み取り、文字列として返す
-                
-                for (int i = 0; i < 13; i++)
-                {
-                    sLine = reader.ReadLine();
-                    sFields[i] = sLine;
-                }
-                
-                tbBudgets.Text = sFields[0];
-                tbRent.Text = sFields[1];
-                tbUtilityCosts.Text = sFields[2];
-                tbCellPhoneBill.Text = sFields[3];
-                tbFoodCosts.Text = sFields[4];
-                tbMedicalcosts.Text = sFields[5];
-                tbMExpense.Text = sFields[6];
-                tbTravelCosts.Text = sFields[7];
-                tbTuition.Text = sFields[8];
-                tbSpecialCosts.Text = sFields[9];
-                tbSavings.Text = sFields[10];
-                tbTotal.Text = sFields[11];
-                tbMemo.Text = sFields[12];
+                sLine = reader.ReadLine();
+                sFields = sLine.Split(',');
+
+                tbBudgets.Text = sFields[1];
+                tbRent.Text = sFields[2];
+                tbUtilityCosts.Text = sFields[3];
+                tbCellPhoneBill.Text = sFields[4];
+                tbFoodCosts.Text = sFields[5];
+                tbMedicalcosts.Text = sFields[6];
+                tbMExpense.Text = sFields[7];
+                tbTravelCosts.Text = sFields[8];
+                tbTuition.Text = sFields[9];
+                tbSpecialCosts.Text = sFields[10];
+                tbSavings.Text = sFields[11];
+                tbTotal.Text = sFields[12];
+                tbMemo.Text = sFields[13];
+                reader.Dispose();
             }
             //来月のデータがなかった場合
             else
@@ -202,31 +197,29 @@ namespace SimpleExpenses
             _Now = next;
             lbDay.Text = next.Year.ToString() + "年" + next.Month.ToString() + "月";
             //相対パスに変更する
-            if (File.Exists(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv"))
+            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            if (File.Exists(fullPath))
             {
                 //相対パスに変更する
-                var reader = new StreamReader(@"C:\Users\infosys\Desktop\test\" + lbDay.Text + ".csv");
+                var reader = new StreamReader(fullPath);
                 //CSVから文字を読み取り、文字列として返す
+                sLine = reader.ReadLine();
+                sFields = sLine.Split(',');
 
-                for (int i = 0; i < 12; i++)
-                {
-                    sLine = reader.ReadLine();
-                    sFields[i] = sLine;
-                }
-                
-                tbBudgets.Text = sFields[0];
-                tbRent.Text = sFields[1];
-                tbUtilityCosts.Text = sFields[2];
-                tbCellPhoneBill.Text = sFields[3];
-                tbFoodCosts.Text = sFields[4];
-                tbMedicalcosts.Text = sFields[5];
-                tbMExpense.Text = sFields[6];
-                tbTravelCosts.Text = sFields[7];
-                tbTuition.Text = sFields[8];
-                tbSpecialCosts.Text = sFields[9];
-                tbSavings.Text = sFields[10];
-                tbTotal.Text = sFields[11];
-                tbMemo.Text = sFields[12];
+                tbBudgets.Text = sFields[1];
+                tbRent.Text = sFields[2];
+                tbUtilityCosts.Text = sFields[3];
+                tbCellPhoneBill.Text = sFields[4];
+                tbFoodCosts.Text = sFields[5];
+                tbMedicalcosts.Text = sFields[6];
+                tbMExpense.Text = sFields[7];
+                tbTravelCosts.Text = sFields[8];
+                tbTuition.Text = sFields[9];
+                tbSpecialCosts.Text = sFields[10];
+                tbSavings.Text = sFields[11];
+                tbTotal.Text = sFields[12];
+                tbMemo.Text = sFields[13];
+                reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。
             }
             //先月のデータがなかった場合
             else
