@@ -118,6 +118,23 @@ namespace SimpleExpenses
                     ,tbSpecialCosts.Text,tbSavings.Text,tbTotal.Text
                     ,tbMemo.Text,
             };
+            ExpensesData expensesData = new ExpensesData
+            {
+                Day = lbDay.Text,
+                Budgets = tbBudgets.Text,
+                Rent = tbRent.Text,
+                UtilityCosts = tbUtilityCosts.Text,
+                CellPhoneBill = tbCellPhoneBill.Text,
+                FoodCosts = tbFoodCosts.Text,
+                Medicalcosts = tbMedicalcosts.Text,
+                MExpense = tbMExpense.Text,
+                TravelCosts = tbTravelCosts.Text,
+                Tuition = tbTuition.Text,
+                SpecialCosts = tbSpecialCosts.Text,
+                Savings = tbSavings.Text,
+                Total = tbTotal.Text,
+                Memo = tbMemo.Text
+            };
             var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
             StreamWriter sw = new StreamWriter(fullPath,true,Encoding.UTF8);
             string outData = "";
@@ -206,7 +223,7 @@ namespace SimpleExpenses
                 sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
 
-                tbBudgets.Text = sFields[1];
+                tbBudgets.Text = ExpensesData.day;
                 tbRent.Text = sFields[2];
                 tbUtilityCosts.Text = sFields[3];
                 tbCellPhoneBill.Text = sFields[4];
