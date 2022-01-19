@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace SimpleExpenses
 {
     public partial class Start : Form
     {
+        BindingList<ExpensesData> listExpenseData = new BindingList<ExpensesData>();
         private DateTime _Now;
 
         public Start()
@@ -29,11 +31,17 @@ namespace SimpleExpenses
             //起動したときの月のデータがあれば表示する
             String sLine = "";
             String[] sFields = new string[13];
+            var bf = new BinaryFormatter();
             var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
             if (File.Exists(fullPath))
             {
-                var reader = new StreamReader(fullPath);
-                sLine = reader.ReadLine();
+                //var reader = new StreamReader(fullPath);
+                using(FileStream.fs = File.OpenRead(fullPath))
+                {
+
+                }
+                listExpenseData = (BindingList<ExpensesData>)bf.Deserialize(fullPath);
+                //sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
 
 
@@ -223,7 +231,8 @@ namespace SimpleExpenses
                 sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
 
-                tbBudgets.Text = ExpensesData.day;
+                //ExpensesData expensesData = listExpenseData;
+                //tbBudgets.Text = expensesData.Day;
                 tbRent.Text = sFields[2];
                 tbUtilityCosts.Text = sFields[3];
                 tbCellPhoneBill.Text = sFields[4];
