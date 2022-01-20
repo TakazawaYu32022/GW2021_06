@@ -14,7 +14,8 @@ namespace SimpleExpenses
 {
     public partial class Start : Form
     {
-        BindingList<ExpensesData> listExpenseData = new BindingList<ExpensesData>();
+        string  fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+
         private DateTime _Now;
 
         public Start()
@@ -31,17 +32,36 @@ namespace SimpleExpenses
             //起動したときの月のデータがあれば表示する
             String sLine = "";
             String[] sFields = new string[13];
-            var bf = new BinaryFormatter();
-            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            List<ExpensesData> edata = new List<ExpensesData>();
+            var csvreaders = File.ReadAllLines(fullPath);
+            foreach(var csvreader in csvreaders)
+            {
+                var items = csvreader.Split(',');
+                ExpensesData expensesData = new ExpensesData
+                {
+                    Budgets = items[0],
+                    Rent = items[1],
+                    UtilityCosts = items[2],
+                    CellPhoneBill = items[3],
+                    FoodCosts = items[4],
+                    Medicalcosts = items[5],
+                    MExpense = items[6],
+                    TravelCosts = items[7],
+                    Tuition = items[8],
+                    SpecialCosts = items[9],
+                    Savings = items[10],
+                    Total = items[11],
+                    Memo = items[12]
+                };
+                edata.Add(expensesData);
+            }
+            this.Dispose();
+
+
             if (File.Exists(fullPath))
             {
-                //var reader = new StreamReader(fullPath);
-                using(FileStream.fs = File.OpenRead(fullPath))
-                {
-
-                }
-                listExpenseData = (BindingList<ExpensesData>)bf.Deserialize(fullPath);
-                //sLine = reader.ReadLine();
+                var reader = new StreamReader(fullPath);
+                sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
 
 
@@ -143,7 +163,7 @@ namespace SimpleExpenses
                 Total = tbTotal.Text,
                 Memo = tbMemo.Text
             };
-            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            //var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
             StreamWriter sw = new StreamWriter(fullPath,true,Encoding.UTF8);
             string outData = "";
             //string outData = string.Format("{0},{1},{2}", lbDay.Text, tbBudgets.Text, tbRent.Text);
@@ -170,10 +190,12 @@ namespace SimpleExpenses
             _Now = next;
             lbDay.Text = next.Year.ToString() + "年"+ next.Month.ToString() + "月";
             //相対パスに変更する
-            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+            //var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
             if (File.Exists(fullPath))
             {
-                var reader = new StreamReader(fullPath);
+
+
+                /*var reader = new StreamReader(fullPath);
                 //CSVから文字を読み取り、文字列として返す
                 sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
@@ -191,7 +213,7 @@ namespace SimpleExpenses
                 tbSavings.Text = sFields[11];
                 tbTotal.Text = sFields[12];
                 tbMemo.Text = sFields[13];
-                reader.Dispose();
+                reader.Dispose();*/
             }
             //来月のデータがなかった場合
             else

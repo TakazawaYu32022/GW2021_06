@@ -33,7 +33,6 @@ namespace SimpleExpenses
             this.btStart = new System.Windows.Forms.Button();
             this.btStatistics = new System.Windows.Forms.Button();
             this.btEnd = new System.Windows.Forms.Button();
-            this.btComparison = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +50,7 @@ namespace SimpleExpenses
             // 
             this.btStart.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btStart.Location = new System.Drawing.Point(95, 118);
+            this.btStart.Location = new System.Drawing.Point(42, 170);
             this.btStart.Name = "btStart";
             this.btStart.Size = new System.Drawing.Size(110, 64);
             this.btStart.TabIndex = 1;
@@ -63,7 +62,7 @@ namespace SimpleExpenses
             // 
             this.btStatistics.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btStatistics.Location = new System.Drawing.Point(337, 118);
+            this.btStatistics.Location = new System.Drawing.Point(219, 170);
             this.btStatistics.Name = "btStatistics";
             this.btStatistics.Size = new System.Drawing.Size(110, 64);
             this.btStatistics.TabIndex = 1;
@@ -74,30 +73,18 @@ namespace SimpleExpenses
             // 
             this.btEnd.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btEnd.Location = new System.Drawing.Point(337, 241);
+            this.btEnd.Location = new System.Drawing.Point(402, 170);
             this.btEnd.Name = "btEnd";
             this.btEnd.Size = new System.Drawing.Size(110, 64);
             this.btEnd.TabIndex = 1;
             this.btEnd.Text = "終了";
             this.btEnd.UseVisualStyleBackColor = true;
             // 
-            // btComparison
-            // 
-            this.btComparison.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btComparison.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btComparison.Location = new System.Drawing.Point(95, 241);
-            this.btComparison.Name = "btComparison";
-            this.btComparison.Size = new System.Drawing.Size(110, 64);
-            this.btComparison.TabIndex = 1;
-            this.btComparison.Text = "比較する";
-            this.btComparison.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 342);
-            this.Controls.Add(this.btComparison);
             this.Controls.Add(this.btEnd);
             this.Controls.Add(this.btStatistics);
             this.Controls.Add(this.btStart);
@@ -115,7 +102,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btStart;
         private System.Windows.Forms.Button btStatistics;
         private System.Windows.Forms.Button btEnd;
-        private System.Windows.Forms.Button btComparison;
     }
 }
 

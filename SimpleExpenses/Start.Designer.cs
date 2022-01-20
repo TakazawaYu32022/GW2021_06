@@ -59,7 +59,6 @@ namespace SimpleExpenses
             this.tbMemo = new System.Windows.Forms.TextBox();
             this.btLManth = new System.Windows.Forms.Button();
             this.btNManth = new System.Windows.Forms.Button();
-            this.btComparison = new System.Windows.Forms.Button();
             this.btCalculation = new System.Windows.Forms.Button();
             this.btMenu = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
@@ -375,7 +374,7 @@ namespace SimpleExpenses
             // btLManth
             // 
             this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btLManth.Location = new System.Drawing.Point(329, 310);
+            this.btLManth.Location = new System.Drawing.Point(487, 312);
             this.btLManth.Name = "btLManth";
             this.btLManth.Size = new System.Drawing.Size(73, 47);
             this.btLManth.TabIndex = 3;
@@ -386,7 +385,7 @@ namespace SimpleExpenses
             // btNManth
             // 
             this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btNManth.Location = new System.Drawing.Point(454, 310);
+            this.btNManth.Location = new System.Drawing.Point(487, 365);
             this.btNManth.Name = "btNManth";
             this.btNManth.Size = new System.Drawing.Size(73, 47);
             this.btNManth.TabIndex = 3;
@@ -394,22 +393,12 @@ namespace SimpleExpenses
             this.btNManth.UseVisualStyleBackColor = true;
             this.btNManth.Click += new System.EventHandler(this.btNManth_Click);
             // 
-            // btComparison
-            // 
-            this.btComparison.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btComparison.Location = new System.Drawing.Point(454, 365);
-            this.btComparison.Name = "btComparison";
-            this.btComparison.Size = new System.Drawing.Size(73, 47);
-            this.btComparison.TabIndex = 3;
-            this.btComparison.Text = "比較";
-            this.btComparison.UseVisualStyleBackColor = true;
-            // 
             // btCalculation
             // 
             this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCalculation.Location = new System.Drawing.Point(329, 365);
+            this.btCalculation.Location = new System.Drawing.Point(310, 318);
             this.btCalculation.Name = "btCalculation";
-            this.btCalculation.Size = new System.Drawing.Size(73, 47);
+            this.btCalculation.Size = new System.Drawing.Size(114, 94);
             this.btCalculation.TabIndex = 3;
             this.btCalculation.Text = "計算";
             this.btCalculation.UseVisualStyleBackColor = true;
@@ -445,7 +434,6 @@ namespace SimpleExpenses
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btMenu);
             this.Controls.Add(this.btCalculation);
-            this.Controls.Add(this.btComparison);
             this.Controls.Add(this.btNManth);
             this.Controls.Add(this.btLManth);
             this.Controls.Add(this.groupBox2);
@@ -495,7 +483,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.TextBox tbMemo;
         private System.Windows.Forms.Button btLManth;
         private System.Windows.Forms.Button btNManth;
-        private System.Windows.Forms.Button btComparison;
         private System.Windows.Forms.Button btCalculation;
         private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Button btSave;
