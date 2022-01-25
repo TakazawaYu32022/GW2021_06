@@ -14,8 +14,11 @@ namespace SimpleExpenses
 {
     public partial class Start : Form
     {
-        string  fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+        BindingList<ExpensesData> listExpensesData = new BindingList<ExpensesData>();
+        
 
+        string  fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
+        
         private DateTime _Now;
 
         public Start()
@@ -33,47 +36,64 @@ namespace SimpleExpenses
             String sLine = "";
             String[] sFields = new string[13];
             List<ExpensesData> edata = new List<ExpensesData>();
-            var csvreaders = File.ReadAllLines(fullPath);
-            foreach(var csvreader in csvreaders)
-            {
-                var items = csvreader.Split(',');
-                ExpensesData expensesData = new ExpensesData
-                {
-                    Budgets = items[0],
-                    Rent = items[1],
-                    UtilityCosts = items[2],
-                    CellPhoneBill = items[3],
-                    FoodCosts = items[4],
-                    Medicalcosts = items[5],
-                    MExpense = items[6],
-                    TravelCosts = items[7],
-                    Tuition = items[8],
-                    SpecialCosts = items[9],
-                    Savings = items[10],
-                    Total = items[11],
-                    Memo = items[12]
-                };
-                edata.Add(expensesData);
-            }
-            this.Dispose();
+            
+
 
 
             if (File.Exists(fullPath))
             {
-                var reader = new StreamReader(fullPath);
+                var csvreaders = File.ReadAllLines(fullPath);
+                foreach (var csvreader in csvreaders)
+                {
+                    var items = csvreader.Split(',');
+                    ExpensesData expensesData = new ExpensesData
+                    {
+                        Budgets = items[1],
+                        Rent = items[2],
+                        UtilityCosts = items[3],
+                        CellPhoneBill = items[4],
+                        FoodCosts = items[5],
+                        Medicalcosts = items[6],
+                        MExpense = items[7],
+                        TravelCosts = items[8],
+                        Tuition = items[9],
+                        SpecialCosts = items[10],
+                        Savings = items[11],
+                        Total = items[12],
+                        Memo = items[13]
+                    };
+                    edata.Add(expensesData);
+                    
+                }
+
+                tbBudgets.Text = edata[0].Budgets.ToString();
+                tbRent.Text = edata[0].Rent.ToString();
+                tbUtilityCosts.Text = edata[0].UtilityCosts.ToString();
+                tbCellPhoneBill.Text = edata[0].CellPhoneBill.ToString();
+                tbFoodCosts.Text = edata[0].FoodCosts.ToString();
+                tbMedicalcosts.Text = edata[0].Medicalcosts.ToString();
+                tbMExpense.Text = edata[0].MExpense.ToString();
+                tbTravelCosts.Text = edata[0].TravelCosts.ToString();
+                tbTuition.Text = edata[0].Tuition.ToString();
+                tbSpecialCosts.Text = edata[0].SpecialCosts.ToString();
+                tbSavings.Text = edata[0].Savings.ToString();
+                tbTotal.Text = edata[0].Total.ToString();
+                tbMemo.Text = edata[0].Memo.ToString();
+
+                /*var reader = new StreamReader(fullPath);
                 sLine = reader.ReadLine();
                 sFields = sLine.Split(',');
 
 
                 //CSVから文字を読み取り、文字列として返す
 
-                /*for (int i = 0; i < 12; i++)
+                for (int i = 0; i < 12; i++)
                 {
                     
                     
-                }*/
+                }
 
-                tbBudgets.Text = sFields[1];
+                tbBudgets.Text = ;
                 tbRent.Text = sFields[2];
                 tbUtilityCosts.Text = sFields[3];
                 tbCellPhoneBill.Text = sFields[4];
@@ -86,7 +106,7 @@ namespace SimpleExpenses
                 tbSavings.Text = sFields[11];
                 tbTotal.Text = sFields[12];
                 tbMemo.Text = sFields[13];
-                reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。
+                reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。*/
             }
             //データがなかった場合
             else
