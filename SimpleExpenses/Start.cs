@@ -15,7 +15,8 @@ namespace SimpleExpenses
     public partial class Start : Form
     {
         BindingList<ExpensesData> listExpensesData = new BindingList<ExpensesData>();
-        
+        List<ExpensesData> edata = new List<ExpensesData>();
+
 
         string  fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
         
@@ -32,14 +33,11 @@ namespace SimpleExpenses
         {
             DateTime dt = DateTime.Now;
             lbDay.Text = dt.Year.ToString() + "年" + dt.Month.ToString() + "月";
-            //起動したときの月のデータがあれば表示する
-            String sLine = "";
-            String[] sFields = new string[13];
-            List<ExpensesData> edata = new List<ExpensesData>();
             
 
 
 
+            //起動したときの月のデータがあれば表示する
             if (File.Exists(fullPath))
             {
                 var csvreaders = File.ReadAllLines(fullPath);
@@ -48,6 +46,7 @@ namespace SimpleExpenses
                     var items = csvreader.Split(',');
                     ExpensesData expensesData = new ExpensesData
                     {
+                        Day = items[0],
                         Budgets = items[1],
                         Rent = items[2],
                         UtilityCosts = items[3],
@@ -66,47 +65,23 @@ namespace SimpleExpenses
                     
                 }
 
-                tbBudgets.Text = edata[0].Budgets.ToString();
-                tbRent.Text = edata[0].Rent.ToString();
-                tbUtilityCosts.Text = edata[0].UtilityCosts.ToString();
-                tbCellPhoneBill.Text = edata[0].CellPhoneBill.ToString();
-                tbFoodCosts.Text = edata[0].FoodCosts.ToString();
-                tbMedicalcosts.Text = edata[0].Medicalcosts.ToString();
-                tbMExpense.Text = edata[0].MExpense.ToString();
-                tbTravelCosts.Text = edata[0].TravelCosts.ToString();
-                tbTuition.Text = edata[0].Tuition.ToString();
-                tbSpecialCosts.Text = edata[0].SpecialCosts.ToString();
-                tbSavings.Text = edata[0].Savings.ToString();
-                tbTotal.Text = edata[0].Total.ToString();
-                tbMemo.Text = edata[0].Memo.ToString();
+                int listNumber = edata.FindIndex(s => s.Day == lbDay.Text);
 
-                /*var reader = new StreamReader(fullPath);
-                sLine = reader.ReadLine();
-                sFields = sLine.Split(',');
+                tbBudgets.Text = edata[listNumber].Budgets.ToString();
+                tbRent.Text = edata[listNumber].Rent.ToString();
+                tbUtilityCosts.Text = edata[listNumber].UtilityCosts.ToString();
+                tbCellPhoneBill.Text = edata[listNumber].CellPhoneBill.ToString();
+                tbFoodCosts.Text = edata[listNumber].FoodCosts.ToString();
+                tbMedicalcosts.Text = edata[listNumber].Medicalcosts.ToString();
+                tbMExpense.Text = edata[listNumber].MExpense.ToString();
+                tbTravelCosts.Text = edata[listNumber].TravelCosts.ToString();
+                tbTuition.Text = edata[listNumber].Tuition.ToString();
+                tbSpecialCosts.Text = edata[listNumber].SpecialCosts.ToString();
+                tbSavings.Text = edata[listNumber].Savings.ToString();
+                tbTotal.Text = edata[listNumber].Total.ToString();
+                tbMemo.Text = edata[listNumber].Memo.ToString();
 
-
-                //CSVから文字を読み取り、文字列として返す
-
-                for (int i = 0; i < 12; i++)
-                {
-                    
-                    
-                }
-
-                tbBudgets.Text = ;
-                tbRent.Text = sFields[2];
-                tbUtilityCosts.Text = sFields[3];
-                tbCellPhoneBill.Text = sFields[4];
-                tbFoodCosts.Text = sFields[5];
-                tbMedicalcosts.Text = sFields[6];
-                tbMExpense.Text = sFields[7];
-                tbTravelCosts.Text = sFields[8];
-                tbTuition.Text = sFields[9];
-                tbSpecialCosts.Text = sFields[10];
-                tbSavings.Text = sFields[11];
-                tbTotal.Text = sFields[12];
-                tbMemo.Text = sFields[13];
-                reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。*/
+                
             }
             //データがなかった場合
             else
@@ -183,10 +158,8 @@ namespace SimpleExpenses
                 Total = tbTotal.Text,
                 Memo = tbMemo.Text
             };
-            //var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
             StreamWriter sw = new StreamWriter(fullPath,true,Encoding.UTF8);
             string outData = "";
-            //string outData = string.Format("{0},{1},{2}", lbDay.Text, tbBudgets.Text, tbRent.Text);
             for (int i = 0; i< data.Length; i++)
             {
                 outData += data[i] + ",";
@@ -204,36 +177,29 @@ namespace SimpleExpenses
 
         private void btNManth_Click(object sender, EventArgs e)
         {
-            String sLine ="";
-            String[] sFields = new string[13];
             DateTime next = _Now.AddMonths(+1);
             _Now = next;
             lbDay.Text = next.Year.ToString() + "年"+ next.Month.ToString() + "月";
-            //相対パスに変更する
-            //var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
-            if (File.Exists(fullPath))
+            //来月のデータがあるか探す
+            if (edata.Exists(s=> s.Day == lbDay.Text))
             {
 
 
-                /*var reader = new StreamReader(fullPath);
-                //CSVから文字を読み取り、文字列として返す
-                sLine = reader.ReadLine();
-                sFields = sLine.Split(',');
+                int listNumber = edata.FindIndex(s => s.Day == lbDay.Text);
 
-                tbBudgets.Text = sFields[1];
-                tbRent.Text = sFields[2];
-                tbUtilityCosts.Text = sFields[3];
-                tbCellPhoneBill.Text = sFields[4];
-                tbFoodCosts.Text = sFields[5];
-                tbMedicalcosts.Text = sFields[6];
-                tbMExpense.Text = sFields[7];
-                tbTravelCosts.Text = sFields[8];
-                tbTuition.Text = sFields[9];
-                tbSpecialCosts.Text = sFields[10];
-                tbSavings.Text = sFields[11];
-                tbTotal.Text = sFields[12];
-                tbMemo.Text = sFields[13];
-                reader.Dispose();*/
+                tbBudgets.Text = edata[listNumber].Budgets.ToString();
+                tbRent.Text = edata[listNumber].Rent.ToString();
+                tbUtilityCosts.Text = edata[listNumber].UtilityCosts.ToString();
+                tbCellPhoneBill.Text = edata[listNumber].CellPhoneBill.ToString();
+                tbFoodCosts.Text = edata[listNumber].FoodCosts.ToString();
+                tbMedicalcosts.Text = edata[listNumber].Medicalcosts.ToString();
+                tbMExpense.Text = edata[listNumber].MExpense.ToString();
+                tbTravelCosts.Text = edata[listNumber].TravelCosts.ToString();
+                tbTuition.Text = edata[listNumber].Tuition.ToString();
+                tbSpecialCosts.Text = edata[listNumber].SpecialCosts.ToString();
+                tbSavings.Text = edata[listNumber].Savings.ToString();
+                tbTotal.Text = edata[listNumber].Total.ToString();
+                tbMemo.Text = edata[listNumber].Memo.ToString();
             }
             //来月のデータがなかった場合
             else
@@ -258,36 +224,27 @@ namespace SimpleExpenses
 
         private void btLManth_Click(object sender, EventArgs e)
         {
-            String sLine = "";
-            String[] sFields = new string[13];
-            DateTime next = _Now.AddMonths(-1);//Nowを別のものに変えないとダメ
-            _Now = next;
-            lbDay.Text = next.Year.ToString() + "年" + next.Month.ToString() + "月";
-            //相対パスに変更する
-            var fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
-            if (File.Exists(fullPath))
+            DateTime prev = _Now.AddMonths(-1);//Nowを別のものに変えないとダメ
+            _Now = prev;
+            lbDay.Text = prev.Year.ToString() + "年" + prev.Month.ToString() + "月";
+            //先月のデータがあるか探す
+            if (edata.Exists(s => s.Day == lbDay.Text))
             {
-                //相対パスに変更する
-                var reader = new StreamReader(fullPath);
-                //CSVから文字を読み取り、文字列として返す
-                sLine = reader.ReadLine();
-                sFields = sLine.Split(',');
+                int listNumber = edata.FindIndex(s => s.Day == lbDay.Text);
 
-                //ExpensesData expensesData = listExpenseData;
-                //tbBudgets.Text = expensesData.Day;
-                tbRent.Text = sFields[2];
-                tbUtilityCosts.Text = sFields[3];
-                tbCellPhoneBill.Text = sFields[4];
-                tbFoodCosts.Text = sFields[5];
-                tbMedicalcosts.Text = sFields[6];
-                tbMExpense.Text = sFields[7];
-                tbTravelCosts.Text = sFields[8];
-                tbTuition.Text = sFields[9];
-                tbSpecialCosts.Text = sFields[10];
-                tbSavings.Text = sFields[11];
-                tbTotal.Text = sFields[12];
-                tbMemo.Text = sFields[13];
-                reader.Dispose();//データの解放。ファイルをよみこんだら必ず入れる。
+                tbBudgets.Text = edata[listNumber].Budgets.ToString();
+                tbRent.Text = edata[listNumber].Rent.ToString();
+                tbUtilityCosts.Text = edata[listNumber].UtilityCosts.ToString();
+                tbCellPhoneBill.Text = edata[listNumber].CellPhoneBill.ToString();
+                tbFoodCosts.Text = edata[listNumber].FoodCosts.ToString();
+                tbMedicalcosts.Text = edata[listNumber].Medicalcosts.ToString();
+                tbMExpense.Text = edata[listNumber].MExpense.ToString();
+                tbTravelCosts.Text = edata[listNumber].TravelCosts.ToString();
+                tbTuition.Text = edata[listNumber].Tuition.ToString();
+                tbSpecialCosts.Text = edata[listNumber].SpecialCosts.ToString();
+                tbSavings.Text = edata[listNumber].Savings.ToString();
+                tbTotal.Text = edata[listNumber].Total.ToString();
+                tbMemo.Text = edata[listNumber].Memo.ToString();
             }
             //先月のデータがなかった場合
             else
