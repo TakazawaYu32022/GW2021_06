@@ -14,7 +14,6 @@ namespace SimpleExpenses
 {
     public partial class Start : Form
     {
-        BindingList<ExpensesData> listExpensesData = new BindingList<ExpensesData>();
         List<ExpensesData> edata = new List<ExpensesData>();
 
 
@@ -130,9 +129,7 @@ namespace SimpleExpenses
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            //データの更新
-            //
-            //var writer = new StreamWriter(fs);
+            tbMemo.Text = tbMemo.Text.Replace("\r", "").Replace("\n","");//改行するとCSV内で別データとして扱われるので改行を削除する。
             string[] data = new string[] 
             {
                      lbDay.Text,tbBudgets.Text,tbRent.Text,tbUtilityCosts.Text

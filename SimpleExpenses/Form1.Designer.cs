@@ -68,6 +68,7 @@ namespace SimpleExpenses
             this.btStatistics.TabIndex = 1;
             this.btStatistics.Text = "統計";
             this.btStatistics.UseVisualStyleBackColor = true;
+            this.btStatistics.Click += new System.EventHandler(this.btStatistics_Click);
             // 
             // btEnd
             // 
@@ -79,6 +80,7 @@ namespace SimpleExpenses
             this.btEnd.TabIndex = 1;
             this.btEnd.Text = "終了";
             this.btEnd.UseVisualStyleBackColor = true;
+            this.btEnd.Click += new System.EventHandler(this.btEnd_Click);
             // 
             // Form1
             // 

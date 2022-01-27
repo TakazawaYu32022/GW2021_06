@@ -373,57 +373,63 @@ namespace SimpleExpenses
             // 
             // btLManth
             // 
+            this.btLManth.BackColor = System.Drawing.Color.PaleGreen;
             this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btLManth.Location = new System.Drawing.Point(487, 312);
             this.btLManth.Name = "btLManth";
             this.btLManth.Size = new System.Drawing.Size(73, 47);
             this.btLManth.TabIndex = 3;
             this.btLManth.Text = "先月";
-            this.btLManth.UseVisualStyleBackColor = true;
+            this.btLManth.UseVisualStyleBackColor = false;
             this.btLManth.Click += new System.EventHandler(this.btLManth_Click);
             // 
             // btNManth
             // 
+            this.btNManth.BackColor = System.Drawing.Color.PaleGreen;
             this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btNManth.Location = new System.Drawing.Point(487, 365);
             this.btNManth.Name = "btNManth";
             this.btNManth.Size = new System.Drawing.Size(73, 47);
             this.btNManth.TabIndex = 3;
             this.btNManth.Text = "来月";
-            this.btNManth.UseVisualStyleBackColor = true;
+            this.btNManth.UseVisualStyleBackColor = false;
             this.btNManth.Click += new System.EventHandler(this.btNManth_Click);
             // 
             // btCalculation
             // 
+            this.btCalculation.BackColor = System.Drawing.Color.PaleGreen;
             this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCalculation.Location = new System.Drawing.Point(310, 318);
             this.btCalculation.Name = "btCalculation";
             this.btCalculation.Size = new System.Drawing.Size(114, 94);
             this.btCalculation.TabIndex = 3;
             this.btCalculation.Text = "計算";
-            this.btCalculation.UseVisualStyleBackColor = true;
+            this.btCalculation.UseVisualStyleBackColor = false;
             this.btCalculation.Click += new System.EventHandler(this.btCalculation_Click);
             // 
             // btMenu
             // 
+            this.btMenu.BackColor = System.Drawing.Color.LightGreen;
             this.btMenu.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btMenu.Location = new System.Drawing.Point(508, 0);
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(64, 34);
             this.btMenu.TabIndex = 4;
             this.btMenu.Text = "メニュー";
-            this.btMenu.UseVisualStyleBackColor = true;
+            this.btMenu.UseVisualStyleBackColor = false;
             this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 
             // btSave
             // 
+            this.btSave.BackColor = System.Drawing.Color.LightGreen;
             this.btSave.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btSave.ForeColor = System.Drawing.Color.Black;
             this.btSave.Location = new System.Drawing.Point(445, 0);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(64, 34);
             this.btSave.TabIndex = 4;
             this.btSave.Text = "保存";
-            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.UseVisualStyleBackColor = false;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // Start

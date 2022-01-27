@@ -22,5 +22,16 @@ namespace SimpleExpenses
             Start start = new Start();
             start.ShowDialog();
         }
+
+        private void btStatistics_Click(object sender, EventArgs e)
+        {
+            Statistics statistics = new Statistics();
+            statistics.ShowDialog();
+        }
+
+        private void btEnd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
