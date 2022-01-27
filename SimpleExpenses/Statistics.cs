@@ -47,7 +47,24 @@ namespace SimpleExpenses
                     };
                     edata.Add(expensesData);
                 }
-                    string[] xValues = new string[] { };
+                List<int> Budgets = new List<int>();
+                List<int> TotalCosts = new List<int>();
+                int sum = 0;
+                List<String> Day = new List<string>();
+                //string[] TotalCosts = new string[] { };
+                //string[] Budgets = new string[] { };
+                for (int i = 0; i < File.ReadAllLines(fullPath).Length; i++)
+                {
+                    Budgets.Add(int.Parse(edata[i].Budgets));
+                    Day.Add(edata[i].Day);
+                    sum = int.Parse(edata[i].Rent) + int.Parse(edata[i].UtilityCosts) + int.Parse(edata[i].CellPhoneBill)
+                                   + int.Parse(edata[i].FoodCosts) + int.Parse(edata[i].Medicalcosts) + int.Parse(edata[i].MExpense)
+                                   + int.Parse(edata[i].TravelCosts) + int.Parse(edata[i].Tuition) + int.Parse(edata[i].SpecialCosts)
+                                   + int.Parse(edata[i].Savings);
+                    TotalCosts.Add(sum);
+                }
+                ExpensesChart.Series[0].Points.AddXY(Day, TotalCosts);
+                //ExpensesChart.Series[1].Points.Add(Budgets);
 
             }
             else

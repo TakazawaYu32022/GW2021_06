@@ -123,8 +123,8 @@ namespace SimpleExpenses
             {
                 MessageBox.Show("数字のみ入力してください。");
             }
-            //「計」の値をカンマ区切りで表示する。（CSVファイルに保存するとき別のデータとして区切られてしまう）
-            tbTotal.Text = String.Format(/*"{0:#,##0}",*/ result.ToString());
+            
+            tbTotal.Text = String.Format(result.ToString());
         }
 
         private void btSave_Click(object sender, EventArgs e)
