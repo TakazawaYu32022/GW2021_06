@@ -1,7 +1,7 @@
 ﻿
 namespace SimpleExpenses
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// 必要なデザイナー変数です。
