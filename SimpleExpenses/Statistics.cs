@@ -16,8 +16,7 @@ namespace SimpleExpenses
     {
         List<ExpensesData> edata = new List<ExpensesData>();
         string fullPath = Path.GetFullPath(@"..\家計簿記録.csv");
-        Point? prevPosition = null; // グラフ上の位置（グラフデータ表示用）
-        ToolTip tooltip = new ToolTip(); // ツールチップ（グラフデータ表示用）
+        
         public Statistics()
         {
             InitializeComponent();
@@ -66,6 +65,7 @@ namespace SimpleExpenses
             else
             {
                 MessageBox.Show("まだデータを記録していません。");
+                this.Close();
             }
         }
 

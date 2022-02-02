@@ -111,7 +111,7 @@ namespace SimpleExpenses
             // 
             // tbTotal
             // 
-            this.tbTotal.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTotal.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbTotal.Location = new System.Drawing.Point(153, 305);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(120, 23);
@@ -121,7 +121,7 @@ namespace SimpleExpenses
             // 
             // tbSavings
             // 
-            this.tbSavings.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbSavings.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbSavings.Location = new System.Drawing.Point(152, 265);
             this.tbSavings.Name = "tbSavings";
             this.tbSavings.Size = new System.Drawing.Size(120, 23);
@@ -131,7 +131,7 @@ namespace SimpleExpenses
             // 
             // tbSpecialCosts
             // 
-            this.tbSpecialCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbSpecialCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbSpecialCosts.Location = new System.Drawing.Point(153, 239);
             this.tbSpecialCosts.Name = "tbSpecialCosts";
             this.tbSpecialCosts.Size = new System.Drawing.Size(120, 23);
@@ -141,7 +141,7 @@ namespace SimpleExpenses
             // 
             // tbTuition
             // 
-            this.tbTuition.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTuition.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbTuition.Location = new System.Drawing.Point(152, 214);
             this.tbTuition.Name = "tbTuition";
             this.tbTuition.Size = new System.Drawing.Size(120, 23);
@@ -151,7 +151,7 @@ namespace SimpleExpenses
             // 
             // tbMExpense
             // 
-            this.tbMExpense.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbMExpense.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbMExpense.Location = new System.Drawing.Point(152, 164);
             this.tbMExpense.Name = "tbMExpense";
             this.tbMExpense.Size = new System.Drawing.Size(120, 23);
@@ -161,7 +161,7 @@ namespace SimpleExpenses
             // 
             // tbTravelCosts
             // 
-            this.tbTravelCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbTravelCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbTravelCosts.Location = new System.Drawing.Point(152, 189);
             this.tbTravelCosts.Name = "tbTravelCosts";
             this.tbTravelCosts.Size = new System.Drawing.Size(120, 23);
@@ -171,7 +171,7 @@ namespace SimpleExpenses
             // 
             // tbMedicalcosts
             // 
-            this.tbMedicalcosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbMedicalcosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbMedicalcosts.Location = new System.Drawing.Point(152, 137);
             this.tbMedicalcosts.Name = "tbMedicalcosts";
             this.tbMedicalcosts.Size = new System.Drawing.Size(120, 23);
@@ -181,7 +181,7 @@ namespace SimpleExpenses
             // 
             // tbFoodCosts
             // 
-            this.tbFoodCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbFoodCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbFoodCosts.Location = new System.Drawing.Point(152, 112);
             this.tbFoodCosts.Name = "tbFoodCosts";
             this.tbFoodCosts.Size = new System.Drawing.Size(120, 23);
@@ -191,7 +191,7 @@ namespace SimpleExpenses
             // 
             // tbCellPhoneBill
             // 
-            this.tbCellPhoneBill.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbCellPhoneBill.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbCellPhoneBill.Location = new System.Drawing.Point(152, 87);
             this.tbCellPhoneBill.Name = "tbCellPhoneBill";
             this.tbCellPhoneBill.Size = new System.Drawing.Size(120, 23);
@@ -201,7 +201,7 @@ namespace SimpleExpenses
             // 
             // tbUtilityCosts
             // 
-            this.tbUtilityCosts.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbUtilityCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbUtilityCosts.Location = new System.Drawing.Point(152, 62);
             this.tbUtilityCosts.Name = "tbUtilityCosts";
             this.tbUtilityCosts.Size = new System.Drawing.Size(120, 23);
@@ -211,7 +211,7 @@ namespace SimpleExpenses
             // 
             // tbRent
             // 
-            this.tbRent.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbRent.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbRent.Location = new System.Drawing.Point(152, 37);
             this.tbRent.Name = "tbRent";
             this.tbRent.Size = new System.Drawing.Size(120, 23);
@@ -221,7 +221,7 @@ namespace SimpleExpenses
             // 
             // tbBudgets
             // 
-            this.tbBudgets.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbBudgets.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.tbBudgets.Location = new System.Drawing.Point(152, 12);
             this.tbBudgets.Name = "tbBudgets";
             this.tbBudgets.Size = new System.Drawing.Size(120, 23);
