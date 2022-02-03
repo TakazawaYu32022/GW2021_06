@@ -57,11 +57,12 @@ namespace SimpleExpenses
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbMemo = new System.Windows.Forms.TextBox();
-            this.btLManth = new System.Windows.Forms.Button();
-            this.btNManth = new System.Windows.Forms.Button();
-            this.btCalculation = new System.Windows.Forms.Button();
             this.btMenu = new System.Windows.Forms.Button();
+            this.PieChart = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
+            this.btCalculation = new System.Windows.Forms.Button();
+            this.btNManth = new System.Windows.Forms.Button();
+            this.btLManth = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@ namespace SimpleExpenses
             // 
             this.lbDay.AutoSize = true;
             this.lbDay.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbDay.ForeColor = System.Drawing.Color.Sienna;
             this.lbDay.Location = new System.Drawing.Point(222, 30);
             this.lbDay.Name = "lbDay";
             this.lbDay.Size = new System.Drawing.Size(124, 27);
@@ -78,7 +80,7 @@ namespace SimpleExpenses
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.SandyBrown;
             this.groupBox1.Controls.Add(this.tbTotal);
             this.groupBox1.Controls.Add(this.tbSavings);
             this.groupBox1.Controls.Add(this.tbSpecialCosts);
@@ -112,7 +114,7 @@ namespace SimpleExpenses
             // tbTotal
             // 
             this.tbTotal.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbTotal.Location = new System.Drawing.Point(153, 305);
+            this.tbTotal.Location = new System.Drawing.Point(152, 309);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(120, 23);
             this.tbTotal.TabIndex = 1;
@@ -122,7 +124,7 @@ namespace SimpleExpenses
             // tbSavings
             // 
             this.tbSavings.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbSavings.Location = new System.Drawing.Point(152, 265);
+            this.tbSavings.Location = new System.Drawing.Point(152, 271);
             this.tbSavings.Name = "tbSavings";
             this.tbSavings.Size = new System.Drawing.Size(120, 23);
             this.tbSavings.TabIndex = 1;
@@ -132,7 +134,7 @@ namespace SimpleExpenses
             // tbSpecialCosts
             // 
             this.tbSpecialCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbSpecialCosts.Location = new System.Drawing.Point(153, 239);
+            this.tbSpecialCosts.Location = new System.Drawing.Point(152, 246);
             this.tbSpecialCosts.Name = "tbSpecialCosts";
             this.tbSpecialCosts.Size = new System.Drawing.Size(120, 23);
             this.tbSpecialCosts.TabIndex = 1;
@@ -142,7 +144,7 @@ namespace SimpleExpenses
             // tbTuition
             // 
             this.tbTuition.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbTuition.Location = new System.Drawing.Point(152, 214);
+            this.tbTuition.Location = new System.Drawing.Point(152, 221);
             this.tbTuition.Name = "tbTuition";
             this.tbTuition.Size = new System.Drawing.Size(120, 23);
             this.tbTuition.TabIndex = 1;
@@ -152,7 +154,7 @@ namespace SimpleExpenses
             // tbMExpense
             // 
             this.tbMExpense.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbMExpense.Location = new System.Drawing.Point(152, 164);
+            this.tbMExpense.Location = new System.Drawing.Point(152, 171);
             this.tbMExpense.Name = "tbMExpense";
             this.tbMExpense.Size = new System.Drawing.Size(120, 23);
             this.tbMExpense.TabIndex = 1;
@@ -162,7 +164,7 @@ namespace SimpleExpenses
             // tbTravelCosts
             // 
             this.tbTravelCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbTravelCosts.Location = new System.Drawing.Point(152, 189);
+            this.tbTravelCosts.Location = new System.Drawing.Point(152, 196);
             this.tbTravelCosts.Name = "tbTravelCosts";
             this.tbTravelCosts.Size = new System.Drawing.Size(120, 23);
             this.tbTravelCosts.TabIndex = 1;
@@ -172,7 +174,7 @@ namespace SimpleExpenses
             // tbMedicalcosts
             // 
             this.tbMedicalcosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbMedicalcosts.Location = new System.Drawing.Point(152, 137);
+            this.tbMedicalcosts.Location = new System.Drawing.Point(152, 146);
             this.tbMedicalcosts.Name = "tbMedicalcosts";
             this.tbMedicalcosts.Size = new System.Drawing.Size(120, 23);
             this.tbMedicalcosts.TabIndex = 1;
@@ -182,7 +184,7 @@ namespace SimpleExpenses
             // tbFoodCosts
             // 
             this.tbFoodCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbFoodCosts.Location = new System.Drawing.Point(152, 112);
+            this.tbFoodCosts.Location = new System.Drawing.Point(152, 121);
             this.tbFoodCosts.Name = "tbFoodCosts";
             this.tbFoodCosts.Size = new System.Drawing.Size(120, 23);
             this.tbFoodCosts.TabIndex = 1;
@@ -192,7 +194,7 @@ namespace SimpleExpenses
             // tbCellPhoneBill
             // 
             this.tbCellPhoneBill.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbCellPhoneBill.Location = new System.Drawing.Point(152, 87);
+            this.tbCellPhoneBill.Location = new System.Drawing.Point(152, 96);
             this.tbCellPhoneBill.Name = "tbCellPhoneBill";
             this.tbCellPhoneBill.Size = new System.Drawing.Size(120, 23);
             this.tbCellPhoneBill.TabIndex = 1;
@@ -202,7 +204,7 @@ namespace SimpleExpenses
             // tbUtilityCosts
             // 
             this.tbUtilityCosts.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbUtilityCosts.Location = new System.Drawing.Point(152, 62);
+            this.tbUtilityCosts.Location = new System.Drawing.Point(152, 71);
             this.tbUtilityCosts.Name = "tbUtilityCosts";
             this.tbUtilityCosts.Size = new System.Drawing.Size(120, 23);
             this.tbUtilityCosts.TabIndex = 1;
@@ -212,7 +214,7 @@ namespace SimpleExpenses
             // tbRent
             // 
             this.tbRent.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbRent.Location = new System.Drawing.Point(152, 37);
+            this.tbRent.Location = new System.Drawing.Point(152, 46);
             this.tbRent.Name = "tbRent";
             this.tbRent.Size = new System.Drawing.Size(120, 23);
             this.tbRent.TabIndex = 1;
@@ -232,18 +234,18 @@ namespace SimpleExpenses
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(15, 166);
+            this.label8.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.Location = new System.Drawing.Point(16, 172);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 13);
+            this.label8.Size = new System.Drawing.Size(40, 16);
             this.label8.TabIndex = 0;
-            this.label8.Text = "雑費(日用品・娯楽)";
+            this.label8.Text = "雑費";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(15, 303);
+            this.label13.Location = new System.Drawing.Point(15, 311);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(24, 16);
             this.label13.TabIndex = 0;
@@ -253,7 +255,7 @@ namespace SimpleExpenses
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(16, 264);
+            this.label12.Location = new System.Drawing.Point(16, 270);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 16);
             this.label12.TabIndex = 0;
@@ -263,7 +265,7 @@ namespace SimpleExpenses
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(15, 238);
+            this.label11.Location = new System.Drawing.Point(15, 244);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 0;
@@ -273,7 +275,7 @@ namespace SimpleExpenses
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(15, 213);
+            this.label10.Location = new System.Drawing.Point(15, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 16);
             this.label10.TabIndex = 0;
@@ -283,7 +285,7 @@ namespace SimpleExpenses
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(15, 188);
+            this.label9.Location = new System.Drawing.Point(15, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 0;
@@ -293,7 +295,7 @@ namespace SimpleExpenses
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(15, 141);
+            this.label7.Location = new System.Drawing.Point(15, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 0;
@@ -303,7 +305,7 @@ namespace SimpleExpenses
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(15, 115);
+            this.label6.Location = new System.Drawing.Point(15, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 16);
             this.label6.TabIndex = 0;
@@ -313,7 +315,7 @@ namespace SimpleExpenses
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(15, 91);
+            this.label5.Location = new System.Drawing.Point(15, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 0;
@@ -323,7 +325,7 @@ namespace SimpleExpenses
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(15, 66);
+            this.label4.Location = new System.Drawing.Point(15, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 0;
@@ -333,7 +335,7 @@ namespace SimpleExpenses
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(15, 41);
+            this.label3.Location = new System.Drawing.Point(15, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 16);
             this.label3.TabIndex = 0;
@@ -343,6 +345,7 @@ namespace SimpleExpenses
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(15, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
@@ -351,7 +354,7 @@ namespace SimpleExpenses
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox2.BackColor = System.Drawing.Color.SandyBrown;
             this.groupBox2.Controls.Add(this.tbMemo);
             this.groupBox2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox2.Location = new System.Drawing.Point(301, 69);
@@ -363,7 +366,7 @@ namespace SimpleExpenses
             // 
             // tbMemo
             // 
-            this.tbMemo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tbMemo.BackColor = System.Drawing.Color.SandyBrown;
             this.tbMemo.Location = new System.Drawing.Point(0, 17);
             this.tbMemo.Multiline = true;
             this.tbMemo.Name = "tbMemo";
@@ -371,47 +374,11 @@ namespace SimpleExpenses
             this.tbMemo.TabIndex = 0;
             this.tbMemo.Text = " ";
             // 
-            // btLManth
-            // 
-            this.btLManth.BackColor = System.Drawing.Color.PaleGreen;
-            this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btLManth.Location = new System.Drawing.Point(487, 312);
-            this.btLManth.Name = "btLManth";
-            this.btLManth.Size = new System.Drawing.Size(73, 47);
-            this.btLManth.TabIndex = 3;
-            this.btLManth.Text = "先月";
-            this.btLManth.UseVisualStyleBackColor = false;
-            this.btLManth.Click += new System.EventHandler(this.btLManth_Click);
-            // 
-            // btNManth
-            // 
-            this.btNManth.BackColor = System.Drawing.Color.PaleGreen;
-            this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btNManth.Location = new System.Drawing.Point(487, 365);
-            this.btNManth.Name = "btNManth";
-            this.btNManth.Size = new System.Drawing.Size(73, 47);
-            this.btNManth.TabIndex = 3;
-            this.btNManth.Text = "来月";
-            this.btNManth.UseVisualStyleBackColor = false;
-            this.btNManth.Click += new System.EventHandler(this.btNManth_Click);
-            // 
-            // btCalculation
-            // 
-            this.btCalculation.BackColor = System.Drawing.Color.PaleGreen;
-            this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCalculation.Location = new System.Drawing.Point(310, 318);
-            this.btCalculation.Name = "btCalculation";
-            this.btCalculation.Size = new System.Drawing.Size(114, 94);
-            this.btCalculation.TabIndex = 3;
-            this.btCalculation.Text = "計算";
-            this.btCalculation.UseVisualStyleBackColor = false;
-            this.btCalculation.Click += new System.EventHandler(this.btCalculation_Click);
-            // 
             // btMenu
             // 
             this.btMenu.BackColor = System.Drawing.Color.LightGreen;
             this.btMenu.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btMenu.Location = new System.Drawing.Point(508, 0);
+            this.btMenu.Location = new System.Drawing.Point(-1, -1);
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(64, 34);
             this.btMenu.TabIndex = 4;
@@ -419,12 +386,28 @@ namespace SimpleExpenses
             this.btMenu.UseVisualStyleBackColor = false;
             this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 
+            // PieChart
+            // 
+            this.PieChart.BackColor = System.Drawing.Color.SandyBrown;
+            this.PieChart.BackgroundImage = global::SimpleExpenses.Properties.Resources.graph_man_smile;
+            this.PieChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PieChart.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PieChart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PieChart.Location = new System.Drawing.Point(329, 365);
+            this.PieChart.Name = "PieChart";
+            this.PieChart.Size = new System.Drawing.Size(73, 47);
+            this.PieChart.TabIndex = 5;
+            this.PieChart.Text = "グラフ";
+            this.PieChart.UseVisualStyleBackColor = false;
+            // 
             // btSave
             // 
-            this.btSave.BackColor = System.Drawing.Color.LightGreen;
+            this.btSave.BackColor = System.Drawing.Color.SandyBrown;
+            this.btSave.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
+            this.btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btSave.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btSave.ForeColor = System.Drawing.Color.Black;
-            this.btSave.Location = new System.Drawing.Point(445, 0);
+            this.btSave.Location = new System.Drawing.Point(59, -1);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(64, 34);
             this.btSave.TabIndex = 4;
@@ -432,11 +415,56 @@ namespace SimpleExpenses
             this.btSave.UseVisualStyleBackColor = false;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
+            // btCalculation
+            // 
+            this.btCalculation.BackColor = System.Drawing.Color.SandyBrown;
+            this.btCalculation.BackgroundImage = global::SimpleExpenses.Properties.Resources.bunbougu_dentaku;
+            this.btCalculation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btCalculation.ForeColor = System.Drawing.Color.White;
+            this.btCalculation.Location = new System.Drawing.Point(465, 365);
+            this.btCalculation.Name = "btCalculation";
+            this.btCalculation.Size = new System.Drawing.Size(73, 47);
+            this.btCalculation.TabIndex = 3;
+            this.btCalculation.Text = "計算";
+            this.btCalculation.UseVisualStyleBackColor = false;
+            this.btCalculation.Click += new System.EventHandler(this.btCalculation_Click);
+            // 
+            // btNManth
+            // 
+            this.btNManth.BackColor = System.Drawing.Color.PaleGreen;
+            this.btNManth.BackgroundImage = global::SimpleExpenses.Properties.Resources.右矢印1;
+            this.btNManth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btNManth.Location = new System.Drawing.Point(465, 307);
+            this.btNManth.Name = "btNManth";
+            this.btNManth.Size = new System.Drawing.Size(73, 47);
+            this.btNManth.TabIndex = 3;
+            this.btNManth.Text = "次月";
+            this.btNManth.UseVisualStyleBackColor = false;
+            this.btNManth.Click += new System.EventHandler(this.btNManth_Click);
+            // 
+            // btLManth
+            // 
+            this.btLManth.BackColor = System.Drawing.Color.PaleGreen;
+            this.btLManth.BackgroundImage = global::SimpleExpenses.Properties.Resources.左矢印3;
+            this.btLManth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btLManth.Location = new System.Drawing.Point(329, 308);
+            this.btLManth.Name = "btLManth";
+            this.btLManth.Size = new System.Drawing.Size(73, 47);
+            this.btLManth.TabIndex = 3;
+            this.btLManth.Text = "前月";
+            this.btLManth.UseVisualStyleBackColor = false;
+            this.btLManth.Click += new System.EventHandler(this.btLManth_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(572, 424);
+            this.Controls.Add(this.PieChart);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btMenu);
             this.Controls.Add(this.btCalculation);
@@ -492,5 +520,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btCalculation;
         private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Button PieChart;
     }
 }

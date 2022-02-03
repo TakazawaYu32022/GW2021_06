@@ -24,7 +24,7 @@ namespace SimpleExpenses
         public Start()
         {
             InitializeComponent();
-            //起動時の月を保存しておく
+            //起動時の年と月を保存
             _Now = DateTime.Now;
         }
 
@@ -82,7 +82,7 @@ namespace SimpleExpenses
 
                 
             }
-            //データがなかった場合
+            //今月のデータがなかった場合
             else
             {
                 tbBudgets.Text = "0";
@@ -129,7 +129,8 @@ namespace SimpleExpenses
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            tbMemo.Text = tbMemo.Text.Replace("\r", "").Replace("\n","");//改行するとCSV内で別データとして扱われるので改行を削除する。
+            //改行するとCSV内で別データとして扱われるので改行を削除する。
+            tbMemo.Text = tbMemo.Text.Replace("\r", "").Replace("\n","");
             string[] data = new string[] 
             {
                      lbDay.Text,tbBudgets.Text,tbRent.Text,tbUtilityCosts.Text

@@ -41,13 +41,21 @@ namespace SimpleExpenses
             // 
             // ExpensesChart
             // 
+            this.ExpensesChart.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.ExpensesChart.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
             legend1.Name = "費用合計";
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            legend2.IsTextAutoFit = false;
             legend2.Name = "予算";
+            legend2.TitleFont = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpensesChart.Legends.Add(legend1);
             this.ExpensesChart.Legends.Add(legend2);
-            this.ExpensesChart.Location = new System.Drawing.Point(26, 62);
+            this.ExpensesChart.Location = new System.Drawing.Point(26, 56);
             this.ExpensesChart.Name = "ExpensesChart";
             this.ExpensesChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
@@ -86,9 +94,13 @@ namespace SimpleExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btMenu);
             this.Controls.Add(this.ExpensesChart);
+            this.DoubleBuffered = true;
             this.Name = "Statistics";
             this.Text = "簡単家計簿★統計★";
             this.Load += new System.EventHandler(this.Statistics_Load);

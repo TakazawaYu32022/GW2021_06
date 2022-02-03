@@ -54,6 +54,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PieChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PieChart.Designer.cs">
+      <DependentUpon>PieChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
@@ -70,6 +76,9 @@
     </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PieChart.resx">
+      <DependentUpon>PieChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +108,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左矢印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左矢印1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunbougu_dentaku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph_man_smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_note_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左矢印2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右矢印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左矢印3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右矢印1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

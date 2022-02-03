@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="左矢印1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\左矢印1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="スクリーンショット (19)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\スクリーンショット (19).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bunbougu_dentaku" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bunbougu_dentaku.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="左矢印2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\左矢印2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book_note_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book_note_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="右矢印" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\右矢印.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="左矢印" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\左矢印.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="左矢印3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\左矢印3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="graph_man_smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\graph_man_smile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="右矢印1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\右矢印1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
