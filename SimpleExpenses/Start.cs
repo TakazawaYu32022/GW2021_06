@@ -32,6 +32,7 @@ namespace SimpleExpenses
         {
             DateTime dt = DateTime.Now;
             lbDay.Text = dt.Year.ToString() + "年" + dt.Month.ToString() + "月";
+            //Start.StartInstance = this;
             
 
 
@@ -261,6 +262,50 @@ namespace SimpleExpenses
                 tbTotal.Text = "0";
                 tbMemo.Text = "";
 
+            }
+        }
+
+        private void btNow_Click(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            
+            lbDay.Text = now.Year.ToString() + "年" + now.Month.ToString() + "月";
+            //来月のデータがあるか探す
+            if (edata.Exists(s => s.Day == lbDay.Text))
+            {
+
+
+                int listNumber = edata.FindIndex(s => s.Day == lbDay.Text);
+
+                tbBudgets.Text = edata[listNumber].Budgets.ToString();
+                tbRent.Text = edata[listNumber].Rent.ToString();
+                tbUtilityCosts.Text = edata[listNumber].UtilityCosts.ToString();
+                tbCellPhoneBill.Text = edata[listNumber].CellPhoneBill.ToString();
+                tbFoodCosts.Text = edata[listNumber].FoodCosts.ToString();
+                tbMedicalcosts.Text = edata[listNumber].Medicalcosts.ToString();
+                tbMExpense.Text = edata[listNumber].MExpense.ToString();
+                tbTravelCosts.Text = edata[listNumber].TravelCosts.ToString();
+                tbTuition.Text = edata[listNumber].Tuition.ToString();
+                tbSpecialCosts.Text = edata[listNumber].SpecialCosts.ToString();
+                tbSavings.Text = edata[listNumber].Savings.ToString();
+                tbTotal.Text = edata[listNumber].Total.ToString();
+                tbMemo.Text = edata[listNumber].Memo.ToString();
+            }
+            else
+            {
+                tbBudgets.Text = "0";
+                tbRent.Text = "0";
+                tbUtilityCosts.Text = "0";
+                tbCellPhoneBill.Text = "0";
+                tbFoodCosts.Text = "0";
+                tbMedicalcosts.Text = "0";
+                tbMExpense.Text = "0";
+                tbTravelCosts.Text = "0";
+                tbTuition.Text = "0";
+                tbSpecialCosts.Text = "0";
+                tbSavings.Text = "0";
+                tbTotal.Text = "0";
+                tbMemo.Text = "";
             }
         }
     }

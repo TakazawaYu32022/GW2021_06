@@ -31,8 +31,8 @@ namespace SimpleExpenses
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btStart = new System.Windows.Forms.Button();
-            this.btStatistics = new System.Windows.Forms.Button();
             this.btEnd = new System.Windows.Forms.Button();
+            this.btStatistics = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,6 +48,9 @@ namespace SimpleExpenses
             // 
             // btStart
             // 
+            this.btStart.BackColor = System.Drawing.Color.SandyBrown;
+            this.btStart.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
+            this.btStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btStart.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btStart.Location = new System.Drawing.Point(42, 170);
@@ -55,23 +58,14 @@ namespace SimpleExpenses
             this.btStart.Size = new System.Drawing.Size(110, 64);
             this.btStart.TabIndex = 1;
             this.btStart.Text = "始める";
-            this.btStart.UseVisualStyleBackColor = true;
+            this.btStart.UseVisualStyleBackColor = false;
             this.btStart.Click += new System.EventHandler(this.btStart_Click);
-            // 
-            // btStatistics
-            // 
-            this.btStatistics.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btStatistics.Location = new System.Drawing.Point(219, 170);
-            this.btStatistics.Name = "btStatistics";
-            this.btStatistics.Size = new System.Drawing.Size(110, 64);
-            this.btStatistics.TabIndex = 1;
-            this.btStatistics.Text = "統計";
-            this.btStatistics.UseVisualStyleBackColor = true;
-            this.btStatistics.Click += new System.EventHandler(this.btStatistics_Click);
             // 
             // btEnd
             // 
+            this.btEnd.BackColor = System.Drawing.Color.SandyBrown;
+            this.btEnd.BackgroundImage = global::SimpleExpenses.Properties.Resources.desk_book;
+            this.btEnd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btEnd.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btEnd.Location = new System.Drawing.Point(402, 170);
@@ -79,19 +73,36 @@ namespace SimpleExpenses
             this.btEnd.Size = new System.Drawing.Size(110, 64);
             this.btEnd.TabIndex = 1;
             this.btEnd.Text = "終了";
-            this.btEnd.UseVisualStyleBackColor = true;
+            this.btEnd.UseVisualStyleBackColor = false;
             this.btEnd.Click += new System.EventHandler(this.btEnd_Click);
             // 
-            // Form1
+            // btStatistics
+            // 
+            this.btStatistics.BackColor = System.Drawing.Color.SandyBrown;
+            this.btStatistics.BackgroundImage = global::SimpleExpenses.Properties.Resources.graph10_oresen1;
+            this.btStatistics.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btStatistics.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btStatistics.Location = new System.Drawing.Point(219, 170);
+            this.btStatistics.Name = "btStatistics";
+            this.btStatistics.Size = new System.Drawing.Size(110, 64);
+            this.btStatistics.TabIndex = 1;
+            this.btStatistics.Text = "統計";
+            this.btStatistics.UseVisualStyleBackColor = false;
+            this.btStatistics.Click += new System.EventHandler(this.btStatistics_Click);
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
             this.ClientSize = new System.Drawing.Size(576, 342);
             this.Controls.Add(this.btEnd);
             this.Controls.Add(this.btStatistics);
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.Text = "簡単家計簿 ★メニュー★";
             this.ResumeLayout(false);
             this.PerformLayout();

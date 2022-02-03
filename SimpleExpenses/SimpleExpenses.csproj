@@ -136,5 +136,11 @@
   <ItemGroup>
     <None Include="Resources\右矢印1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph10_oresen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desk_book.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

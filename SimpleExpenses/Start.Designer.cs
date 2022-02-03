@@ -58,7 +58,7 @@ namespace SimpleExpenses
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbMemo = new System.Windows.Forms.TextBox();
             this.btMenu = new System.Windows.Forms.Button();
-            this.PieChart = new System.Windows.Forms.Button();
+            this.btNow = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.btCalculation = new System.Windows.Forms.Button();
             this.btNManth = new System.Windows.Forms.Button();
@@ -386,19 +386,19 @@ namespace SimpleExpenses
             this.btMenu.UseVisualStyleBackColor = false;
             this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 
-            // PieChart
+            // btNow
             // 
-            this.PieChart.BackColor = System.Drawing.Color.SandyBrown;
-            this.PieChart.BackgroundImage = global::SimpleExpenses.Properties.Resources.graph_man_smile;
-            this.PieChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PieChart.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PieChart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PieChart.Location = new System.Drawing.Point(329, 365);
-            this.PieChart.Name = "PieChart";
-            this.PieChart.Size = new System.Drawing.Size(73, 47);
-            this.PieChart.TabIndex = 5;
-            this.PieChart.Text = "グラフ";
-            this.PieChart.UseVisualStyleBackColor = false;
+            this.btNow.BackColor = System.Drawing.Color.SandyBrown;
+            this.btNow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNow.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btNow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btNow.Location = new System.Drawing.Point(329, 365);
+            this.btNow.Name = "btNow";
+            this.btNow.Size = new System.Drawing.Size(73, 47);
+            this.btNow.TabIndex = 5;
+            this.btNow.Text = "今月";
+            this.btNow.UseVisualStyleBackColor = false;
+            this.btNow.Click += new System.EventHandler(this.btNow_Click);
             // 
             // btSave
             // 
@@ -464,7 +464,7 @@ namespace SimpleExpenses
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(572, 424);
-            this.Controls.Add(this.PieChart);
+            this.Controls.Add(this.btNow);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btMenu);
             this.Controls.Add(this.btCalculation);
@@ -520,6 +520,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btCalculation;
         private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Button btSave;
-        private System.Windows.Forms.Button PieChart;
+        private System.Windows.Forms.Button btNow;
     }
 }

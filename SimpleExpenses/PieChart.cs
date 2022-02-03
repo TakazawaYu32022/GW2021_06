@@ -16,5 +16,10 @@ namespace SimpleExpenses
         {
             InitializeComponent();
         }
+
+        private void PieChart_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

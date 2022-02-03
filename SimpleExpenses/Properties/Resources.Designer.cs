@@ -83,9 +83,29 @@ namespace SimpleExpenses.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap desk_book {
+            get {
+                object obj = ResourceManager.GetObject("desk_book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap graph_man_smile {
             get {
                 object obj = ResourceManager.GetObject("graph_man_smile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap graph10_oresen1 {
+            get {
+                object obj = ResourceManager.GetObject("graph10_oresen1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

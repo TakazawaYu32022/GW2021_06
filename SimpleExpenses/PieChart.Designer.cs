@@ -33,7 +33,7 @@ namespace SimpleExpenses
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ChPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbPieDay = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ChPieChart)).BeginInit();
             this.SuspendLayout();
@@ -55,15 +55,15 @@ namespace SimpleExpenses
             this.ChPieChart.TabIndex = 0;
             this.ChPieChart.Text = "chart1";
             // 
-            // label1
+            // lbPieDay
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(320, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "〇年〇月";
+            this.lbPieDay.AutoSize = true;
+            this.lbPieDay.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPieDay.Location = new System.Drawing.Point(320, 25);
+            this.lbPieDay.Name = "lbPieDay";
+            this.lbPieDay.Size = new System.Drawing.Size(124, 27);
+            this.lbPieDay.TabIndex = 1;
+            this.lbPieDay.Text = "〇年〇月";
             // 
             // button1
             // 
@@ -73,7 +73,7 @@ namespace SimpleExpenses
             this.button1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.Location = new System.Drawing.Point(0, -1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 36);
+            this.button1.Size = new System.Drawing.Size(77, 42);
             this.button1.TabIndex = 2;
             this.button1.Text = "戻る";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,10 +84,11 @@ namespace SimpleExpenses
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbPieDay);
             this.Controls.Add(this.ChPieChart);
             this.Name = "PieChart";
             this.Text = "PieChart";
+            this.Load += new System.EventHandler(this.PieChart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ChPieChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,7 +98,7 @@ namespace SimpleExpenses
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart ChPieChart;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbPieDay;
         private System.Windows.Forms.Button button1;
     }
 }
