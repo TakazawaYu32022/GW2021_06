@@ -268,6 +268,7 @@ namespace SimpleExpenses
         private void btNow_Click(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
+            _Now = now;
             
             lbDay.Text = now.Year.ToString() + "年" + now.Month.ToString() + "月";
             //来月のデータがあるか探す
@@ -307,6 +308,27 @@ namespace SimpleExpenses
                 tbTotal.Text = "0";
                 tbMemo.Text = "";
             }
+        }
+
+        private void btPie_Click(object sender, EventArgs e)
+        {
+            PieChart pieChart = new PieChart();
+            pieChart.day = lbDay.Text;
+            pieChart.budget = int.Parse(tbBudgets.Text);
+            pieChart.rent = int.Parse(tbRent.Text);
+            pieChart.utilitycost = int.Parse(tbUtilityCosts.Text);
+            pieChart.cellphonebill = int.Parse(tbCellPhoneBill.Text);
+            pieChart.foodcost = int.Parse(tbFoodCosts.Text);
+            pieChart.medicalcost = int.Parse(tbMedicalcosts.Text);
+            pieChart.mexpense = int.Parse(tbMExpense.Text);
+            pieChart.travelcost = int.Parse(tbTravelCosts.Text);
+            pieChart.tuition = int.Parse(tbTuition.Text);
+            pieChart.specialcost = int.Parse(tbSpecialCosts.Text);
+            pieChart.saving = int.Parse(tbSavings.Text);
+            pieChart.total = int.Parse(tbTotal.Text);
+            pieChart.Show();
+
+
         }
     }
 }

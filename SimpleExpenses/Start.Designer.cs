@@ -63,6 +63,7 @@ namespace SimpleExpenses
             this.btCalculation = new System.Windows.Forms.Button();
             this.btNManth = new System.Windows.Forms.Button();
             this.btLManth = new System.Windows.Forms.Button();
+            this.btPie = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -458,12 +459,27 @@ namespace SimpleExpenses
             this.btLManth.UseVisualStyleBackColor = false;
             this.btLManth.Click += new System.EventHandler(this.btLManth_Click);
             // 
+            // btPie
+            // 
+            this.btPie.BackColor = System.Drawing.Color.SandyBrown;
+            this.btPie.BackgroundImage = global::SimpleExpenses.Properties.Resources.graph_man_smile;
+            this.btPie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btPie.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btPie.Location = new System.Drawing.Point(119, -1);
+            this.btPie.Name = "btPie";
+            this.btPie.Size = new System.Drawing.Size(62, 34);
+            this.btPie.TabIndex = 6;
+            this.btPie.Text = "グラフ";
+            this.btPie.UseVisualStyleBackColor = false;
+            this.btPie.Click += new System.EventHandler(this.btPie_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(572, 424);
+            this.Controls.Add(this.btPie);
             this.Controls.Add(this.btNow);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btMenu);
@@ -521,5 +537,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btNow;
+        private System.Windows.Forms.Button btPie;
     }
 }
