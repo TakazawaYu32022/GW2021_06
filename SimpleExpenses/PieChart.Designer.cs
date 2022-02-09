@@ -136,7 +136,7 @@ namespace SimpleExpenses
             this.Controls.Add(this.lbPieDay);
             this.Controls.Add(this.ChPieChart);
             this.Name = "PieChart";
-            this.Text = "PieChart";
+            this.Text = "簡単家計簿★円グラフ★";
             this.Load += new System.EventHandler(this.PieChart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ChPieChart)).EndInit();
             this.ResumeLayout(false);

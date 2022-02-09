@@ -82,7 +82,7 @@ namespace SimpleExpenses
             this.btMenu.BackColor = System.Drawing.Color.SandyBrown;
             this.btMenu.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btMenu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btMenu.Location = new System.Drawing.Point(723, 2);
+            this.btMenu.Location = new System.Drawing.Point(-1, -1);
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(74, 38);
             this.btMenu.TabIndex = 1;
