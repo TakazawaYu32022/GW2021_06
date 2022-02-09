@@ -29,62 +29,36 @@ namespace SimpleExpenses
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ChPieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbPieDay = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
+            this.lbBudget = new System.Windows.Forms.Label();
+            this.lbTotalCost = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ChPieChart)).BeginInit();
             this.SuspendLayout();
             // 
             // ChPieChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ChPieChart.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.ChPieChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.ChPieChart.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.ChPieChart.Legends.Add(legend2);
             this.ChPieChart.Location = new System.Drawing.Point(84, 67);
             this.ChPieChart.Name = "ChPieChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            dataPoint1.Label = "家賃(ローン)";
-            dataPoint2.Label = "光熱費";
-            dataPoint3.Label = "通信費";
-            dataPoint4.Label = "食費";
-            dataPoint5.Label = "医療費";
-            dataPoint6.Label = "雑費";
-            dataPoint7.Label = "交通費";
-            dataPoint8.Label = "教育費";
-            dataPoint9.Label = "特別費";
-            dataPoint10.Label = "貯金";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            series1.Points.Add(dataPoint7);
-            series1.Points.Add(dataPoint8);
-            series1.Points.Add(dataPoint9);
-            series1.Points.Add(dataPoint10);
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.ChPieChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.CustomProperties = "PieLabelStyle=Disabled";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.ChPieChart.Series.Add(series2);
             this.ChPieChart.Size = new System.Drawing.Size(618, 345);
             this.ChPieChart.TabIndex = 0;
             this.ChPieChart.Text = "chart1";
@@ -93,31 +67,72 @@ namespace SimpleExpenses
             // 
             this.lbPieDay.AutoSize = true;
             this.lbPieDay.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPieDay.ForeColor = System.Drawing.Color.Sienna;
             this.lbPieDay.Location = new System.Drawing.Point(320, 25);
             this.lbPieDay.Name = "lbPieDay";
             this.lbPieDay.Size = new System.Drawing.Size(124, 27);
             this.lbPieDay.TabIndex = 1;
             this.lbPieDay.Text = "〇年〇月";
             // 
-            // button1
+            // btBack
             // 
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(0, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "戻る";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btBack.BackColor = System.Drawing.Color.SandyBrown;
+            this.btBack.BackgroundImage = global::SimpleExpenses.Properties.Resources.book_note_empty;
+            this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btBack.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btBack.Location = new System.Drawing.Point(0, -1);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(77, 42);
+            this.btBack.TabIndex = 2;
+            this.btBack.Text = "戻る";
+            this.btBack.UseVisualStyleBackColor = false;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
+            // 
+            // lbBudget
+            // 
+            this.lbBudget.AutoSize = true;
+            this.lbBudget.BackColor = System.Drawing.Color.White;
+            this.lbBudget.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbBudget.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbBudget.Location = new System.Drawing.Point(553, 303);
+            this.lbBudget.Name = "lbBudget";
+            this.lbBudget.Size = new System.Drawing.Size(56, 16);
+            this.lbBudget.TabIndex = 3;
+            this.lbBudget.Text = "予算：";
+            // 
+            // lbTotalCost
+            // 
+            this.lbTotalCost.AutoSize = true;
+            this.lbTotalCost.BackColor = System.Drawing.Color.White;
+            this.lbTotalCost.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalCost.ForeColor = System.Drawing.Color.Red;
+            this.lbTotalCost.Location = new System.Drawing.Point(553, 336);
+            this.lbTotalCost.Name = "lbTotalCost";
+            this.lbTotalCost.Size = new System.Drawing.Size(56, 16);
+            this.lbTotalCost.TabIndex = 4;
+            this.lbTotalCost.Text = "支出：";
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.BackColor = System.Drawing.Color.White;
+            this.lbTotal.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotal.Location = new System.Drawing.Point(553, 368);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(56, 16);
+            this.lbTotal.TabIndex = 5;
+            this.lbTotal.Text = "収支：";
             // 
             // PieChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.lbTotalCost);
+            this.Controls.Add(this.lbBudget);
+            this.Controls.Add(this.btBack);
             this.Controls.Add(this.lbPieDay);
             this.Controls.Add(this.ChPieChart);
             this.Name = "PieChart";
@@ -133,6 +148,9 @@ namespace SimpleExpenses
 
         private System.Windows.Forms.DataVisualization.Charting.Chart ChPieChart;
         private System.Windows.Forms.Label lbPieDay;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btBack;
+        private System.Windows.Forms.Label lbBudget;
+        private System.Windows.Forms.Label lbTotalCost;
+        private System.Windows.Forms.Label lbTotal;
     }
 }
