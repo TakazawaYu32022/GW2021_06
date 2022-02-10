@@ -64,6 +64,7 @@ namespace SimpleExpenses
             this.btNManth = new System.Windows.Forms.Button();
             this.btLManth = new System.Windows.Forms.Button();
             this.btPie = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -225,7 +226,7 @@ namespace SimpleExpenses
             // tbBudgets
             // 
             this.tbBudgets.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tbBudgets.Location = new System.Drawing.Point(152, 12);
+            this.tbBudgets.Location = new System.Drawing.Point(152, 14);
             this.tbBudgets.Name = "tbBudgets";
             this.tbBudgets.Size = new System.Drawing.Size(120, 23);
             this.tbBudgets.TabIndex = 1;
@@ -245,10 +246,10 @@ namespace SimpleExpenses
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(15, 311);
+            this.label13.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Location = new System.Drawing.Point(15, 308);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(24, 16);
+            this.label13.Size = new System.Drawing.Size(31, 21);
             this.label13.TabIndex = 0;
             this.label13.Text = "計";
             // 
@@ -256,7 +257,7 @@ namespace SimpleExpenses
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(16, 270);
+            this.label12.Location = new System.Drawing.Point(16, 272);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 16);
             this.label12.TabIndex = 0;
@@ -345,11 +346,11 @@ namespace SimpleExpenses
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(15, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(52, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "予算";
             // 
@@ -393,7 +394,7 @@ namespace SimpleExpenses
             this.btNow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btNow.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btNow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btNow.Location = new System.Drawing.Point(329, 365);
+            this.btNow.Location = new System.Drawing.Point(399, 308);
             this.btNow.Name = "btNow";
             this.btNow.Size = new System.Drawing.Size(73, 47);
             this.btNow.TabIndex = 5;
@@ -423,7 +424,7 @@ namespace SimpleExpenses
             this.btCalculation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btCalculation.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btCalculation.ForeColor = System.Drawing.Color.White;
-            this.btCalculation.Location = new System.Drawing.Point(465, 365);
+            this.btCalculation.Location = new System.Drawing.Point(313, 366);
             this.btCalculation.Name = "btCalculation";
             this.btCalculation.Size = new System.Drawing.Size(73, 47);
             this.btCalculation.TabIndex = 3;
@@ -437,7 +438,7 @@ namespace SimpleExpenses
             this.btNManth.BackgroundImage = global::SimpleExpenses.Properties.Resources.右矢印1;
             this.btNManth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btNManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btNManth.Location = new System.Drawing.Point(465, 307);
+            this.btNManth.Location = new System.Drawing.Point(487, 308);
             this.btNManth.Name = "btNManth";
             this.btNManth.Size = new System.Drawing.Size(73, 47);
             this.btNManth.TabIndex = 3;
@@ -451,7 +452,7 @@ namespace SimpleExpenses
             this.btLManth.BackgroundImage = global::SimpleExpenses.Properties.Resources.左矢印3;
             this.btLManth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btLManth.Font = new System.Drawing.Font("HGS創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btLManth.Location = new System.Drawing.Point(329, 308);
+            this.btLManth.Location = new System.Drawing.Point(313, 308);
             this.btLManth.Name = "btLManth";
             this.btLManth.Size = new System.Drawing.Size(73, 47);
             this.btLManth.TabIndex = 3;
@@ -473,12 +474,23 @@ namespace SimpleExpenses
             this.btPie.UseVisualStyleBackColor = false;
             this.btPie.Click += new System.EventHandler(this.btPie_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(-4, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "「,」は使わないでください。";
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(572, 424);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btPie);
             this.Controls.Add(this.btNow);
             this.Controls.Add(this.btSave);
@@ -538,5 +550,6 @@ namespace SimpleExpenses
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btNow;
         private System.Windows.Forms.Button btPie;
+        private System.Windows.Forms.Label label1;
     }
 }

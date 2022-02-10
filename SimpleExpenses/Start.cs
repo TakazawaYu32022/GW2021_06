@@ -32,7 +32,7 @@ namespace SimpleExpenses
         {
             DateTime dt = DateTime.Now;
             lbDay.Text = dt.Year.ToString() + "年" + dt.Month.ToString() + "月";
-            //Start.StartInstance = this;
+            
             
 
 
@@ -132,6 +132,21 @@ namespace SimpleExpenses
         {
             //改行するとCSV内で別データとして扱われるので改行を削除する。
             tbMemo.Text = tbMemo.Text.Replace("\r", "").Replace("\n","");
+            //「,」を使うとCSV内で別データとして扱われるので「,」を削除する。
+            tbBudgets.Text = tbBudgets.Text.Replace(",", "");
+            tbRent.Text = tbRent.Text.Replace(",", "");
+            tbUtilityCosts.Text = tbUtilityCosts.Text.Replace(",", "");
+            tbCellPhoneBill.Text = tbCellPhoneBill.Text.Replace(",", "");
+            tbFoodCosts.Text = tbFoodCosts.Text.Replace(",", "");
+            tbMedicalcosts.Text = tbMedicalcosts.Text.Replace(",", "");
+            tbMExpense.Text = tbMExpense.Text.Replace(",", "");
+            tbTravelCosts.Text = tbTravelCosts.Text.Replace(",", "");
+            tbTuition.Text = tbTuition.Text.Replace(",", "");
+            tbSpecialCosts.Text = tbSpecialCosts.Text.Replace(",", "");
+            tbSavings.Text = tbSavings.Text.Replace(",", "");
+            tbTotal.Text = tbTotal.Text.Replace(",", "");
+            tbMemo.Text = tbMemo.Text.Replace(",", "");
+
             string[] data = new string[] 
             {
                      lbDay.Text,tbBudgets.Text,tbRent.Text,tbUtilityCosts.Text
