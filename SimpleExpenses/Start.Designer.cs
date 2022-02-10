@@ -246,10 +246,10 @@ namespace SimpleExpenses
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(15, 308);
+            this.label13.Font = new System.Drawing.Font("HGP創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Location = new System.Drawing.Point(15, 311);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 21);
+            this.label13.Size = new System.Drawing.Size(24, 16);
             this.label13.TabIndex = 0;
             this.label13.Text = "計";
             // 
